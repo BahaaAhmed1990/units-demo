@@ -1,0 +1,23 @@
+{
+  "name": "porsche",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "compile": "sass --watch scss:assets/css",
+    "start": "nodemon backend/server.js"
+  },
+  "keywords": [],
+  "author": "Bahaa Ahmed",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sass": "^1.58.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1"
+  }
+}
