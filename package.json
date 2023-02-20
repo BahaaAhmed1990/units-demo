@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "compile": "sass --watch scss:assets/css",
+    "compile": "sass --watch scss:frontend/assets/css",
     "start": "nodemon backend/server.js"
   },
   "keywords": [],
