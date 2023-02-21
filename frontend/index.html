@@ -122,9 +122,9 @@
     </section>
     <!-- unit types -->
     <section class="mt-1" id="unit-types">
-      <div class="container text-center">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col">
+          <div class="col-9">
             <h2>3 Bedroom</h2>
             <div class="position-relative d-inline-block">
               <img
@@ -134,15 +134,146 @@
                 alt="3 bedroom"
                 class="img-thumbnail"
               />
-              <span class="position-absolute my-label" id="label-1">1</span>
-              <span class="position-absolute my-label" id="label-2">2</span>
-              <span class="position-absolute my-label" id="label-3">3</span>
-              <span class="position-absolute my-label" id="label-4">4</span>
-              <span class="position-absolute my-label" id="label-5">5</span>
-              <span class="position-absolute my-label" id="label-6">6</span>
-              <span class="position-absolute my-label" id="label-7">7</span>
-              <span class="position-absolute my-label" id="label-8">8</span>
-              <span class="position-absolute my-label" id="label-9">9</span>
+              <span
+                class="position-absolute my-label"
+                id="label-1"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >1</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-2"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >2</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-3"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >3</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-4"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >4</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-5"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >5</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-6"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >6</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-7"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >7</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-8"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >8</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-9"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >9</span
+              >
+            </div>
+          </div>
+          <div class="col-3" id="table">
+            <table class="table">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">num</th>
+                  <th scope="col">unit code</th>
+                  <th scope="col">room</th>
+                  <th scope="col">type name</th>
+                  <th scope="col">sellabel area</th>
+                </tr>
+              </thead>
+              <tbody id="tabel-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+
+    <section id="modal">
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <ol class="list-group list-group-numbered">
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-start"
+                >
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Room</div>
+                  </div>
+                  <span id="rooms" class="badge bg-primary rounded-pill"
+                    >14</span
+                  >
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-start"
+                >
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Unit code</div>
+                  </div>
+                  <span class="badge bg-primary rounded-pill" id="unit-code"
+                    >14</span
+                  >
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-start"
+                >
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Sellabel Area</div>
+                  </div>
+                  <span class="badge bg-primary rounded-pill" id="sellable-area"
+                    >14</span
+                  >
+                </li>
+              </ol>
             </div>
           </div>
         </div>

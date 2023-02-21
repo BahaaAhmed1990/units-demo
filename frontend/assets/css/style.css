@@ -11613,8 +11613,28 @@ header {
   margin: 0px auto;
 }
 
-#unit-types img {
-  max-width: initial;
+#unit-types .container {
+  margin: 10px 5px;
+}
+
+.img-thumbnail {
+  max-width: initial !important;
+}
+
+#table {
+  display: flex;
+  align-items: end;
+}
+#table thead {
+  vertical-align: middle;
+  font-size: 11px;
+}
+#table tr {
+  height: 55px;
+}
+
+.table {
+  font-size: 12px;
 }
 
 .my-label {
@@ -11625,6 +11645,7 @@ header {
   height: 44px;
   transform: rotate(353deg);
   font-weight: 700;
+  cursor: pointer;
 }
 
 #label-1 {

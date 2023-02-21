@@ -1,7 +1,24 @@
 #unit-types {
-  img {
-    max-width: initial;
+  .container {
+    margin: 10px 5px;
   }
+}
+.img-thumbnail {
+  max-width: initial !important;
+}
+#table {
+  display: flex;
+  align-items: end;
+  thead {
+    vertical-align: middle;
+    font-size: 11px;
+  }
+  tr {
+    height: 55px;
+  }
+}
+.table {
+  font-size: 12px;
 }
 .my-label {
   background-color: #4074999e;
@@ -11,6 +28,7 @@
   height: 44px;
   transform: rotate(353deg);
   font-weight: 700;
+  cursor: pointer;
 }
 #label-1 {
   bottom: 109px;
