@@ -1,0 +1,55 @@
+#slide-show {
+  height: 80vh;
+  margin: 40px auto;
+  overflow: hidden;
+
+  .group {
+    margin-bottom: 40px;
+
+    h6 {
+      margin-bottom: 0;
+    }
+
+    input[type="radio"]:checked + label {
+      border: 2px dashed darkcyan;
+    }
+
+    label:hover {
+      opacity: 0.8;
+    }
+
+    label.active {
+      border: 1px solid blue;
+    }
+
+    .tb-label,
+    .wl-label,
+    .sp-label,
+    .vm-label,
+    .ac-label {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .ac-label[for="ac-btnradio1"] {
+      padding: 10px 35px;
+      background: repeat padding-box border-box 0% / auto scroll
+          linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)),
+        #6298aa;
+    }
+
+    .ac-label[for="ac-btnradio2"] {
+      padding: 10px 35px;
+      background: repeat padding-box border-box 0% / auto scroll
+          linear-gradient(#e8e6e6, #e8e6e6),
+        #6298aa;
+    }
+
+    .ac-label[for="ac-btnradio3"] {
+      padding: 10px 35px;
+      background: repeat padding-box border-box 0% / auto scroll
+          linear-gradient(#dfc7a7, #dfc7a7),
+        #6298aa;
+    }
+  }
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customize unit</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- header section -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="/"
+            ><img src="./assets/images/logo.png" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/virtual-tour">Virtual Tour</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/unit-types">Unit Types</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/customize-unit"
+                  >Customize Unit</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/book-now">Book Now</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- slide show -->
+    <section id="slide-show">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- carousel  -->
+          <div class="col-8">
+            <div
+              id="carouselExampleInterval"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner"></div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <!-- filters -->
+          <div class="col-4">
+            <h3>Choose your settings</h3>
+
+            <!-- terazoo pattern  -->
+            <div class="group" id="tb">
+              <h6>Terazzo Battern</h6>
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic radio toggle button group"
+              >
+                <input
+                  type="radio"
+                  class="btn-check tb-input"
+                  name="tb-btnradio"
+                  id="tb-btnradio1"
+                  autocomplete="off"
+                  checked
+                  value="A"
+                />
+                <label class="tb-label" for="tb-btnradio1"
+                  ><img
+                    src="./assets/images/tb-A.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+
+                <input
+                  type="radio"
+                  class="btn-check tb-input"
+                  name="tb-btnradio"
+                  id="tb-btnradio2"
+                  autocomplete="off"
+                  value="B"
+                />
+                <label class="tb-label" for="tb-btnradio2"
+                  ><img
+                    src="./assets/images/tb-B.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+
+                <input
+                  type="radio"
+                  class="btn-check tb-input"
+                  name="tb-btnradio"
+                  id="tb-btnradio3"
+                  autocomplete="off"
+                  value="C"
+                />
+                <label class="tb-label" for="tb-btnradio3"
+                  ><img
+                    src="./assets/images/tb-C.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+              </div>
+            </div>
+
+            <!-- wooden Louvers -->
+            <div class="group" id="wl">
+              <h6>wooden Louvers</h6>
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic radio toggle button group"
+              >
+                <input
+                  type="radio"
+                  class="btn-check wl-input"
+                  name="wl-btnradio"
+                  id="wl-btnradio1"
+                  autocomplete="off"
+                  checked
+                  value="A"
+                />
+                <label class="wl-label" for="wl-btnradio1"
+                  ><img
+                    src="./assets/images/wl-A.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+
+                <input
+                  type="radio"
+                  class="btn-check wl-input"
+                  name="wl-btnradio"
+                  id="wl-btnradio2"
+                  autocomplete="off"
+                  value="B"
+                />
+                <label class="wl-label" for="wl-btnradio2"
+                  ><img
+                    src="./assets/images/wl-B.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+
+                <input
+                  type="radio"
+                  class="btn-check wl-input"
+                  name="wl-btnradio"
+                  id="wl-btnradio3"
+                  autocomplete="off"
+                  value="C"
+                />
+                <label class="wl-label" for="wl-btnradio3"
+                  ><img
+                    src="./assets/images/wl-C.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+              </div>
+            </div>
+
+            <!-- aluminum color -->
+            <div class="group" id="ac">
+              <h6>Aluminum Color</h6>
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic radio toggle button group"
+              >
+                <input
+                  type="radio"
+                  class="btn-check ac-input"
+                  name="ac-btnradio"
+                  id="ac-btnradio1"
+                  autocomplete="off"
+                  checked
+                  value="A"
+                />
+                <label
+                  class="ac-label"
+                  width="70px"
+                  height="20px"
+                  for="ac-btnradio1"
+                ></label>
+
+                <input
+                  type="radio"
+                  class="btn-check ac-input"
+                  name="ac-btnradio"
+                  id="ac-btnradio2"
+                  autocomplete="off"
+                  value="B"
+                />
+                <label class="ac-label" for="ac-btnradio2"></label>
+
+                <input
+                  type="radio"
+                  class="btn-check ac-input"
+                  name="ac-btnradio"
+                  id="ac-btnradio3"
+                  autocomplete="off"
+                  value="C"
+                />
+                <label class="ac-label" for="ac-btnradio3"></label>
+              </div>
+            </div>
+
+            <!-- stone pattern -->
+            <div class="group" id="sp">
+              <h6>stone pattern</h6>
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic radio toggle button group"
+              >
+                <input
+                  type="radio"
+                  class="btn-check sp-input"
+                  name="sp-btnradio"
+                  id="sp-btnradio1"
+                  autocomplete="off"
+                  checked
+                  value="A"
+                />
+                <label class="sp-label" for="sp-btnradio1"
+                  ><img
+                    src="./assets/images/sp-A.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+
+                <input
+                  type="radio"
+                  class="btn-check sp-input"
+                  name="sp-btnradio"
+                  id="sp-btnradio2"
+                  autocomplete="off"
+                  value="B"
+                />
+                <label class="sp-label" for="sp-btnradio2"
+                  ><img
+                    src="./assets/images/sp-B.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+
+                <input
+                  type="radio"
+                  class="btn-check sp-input"
+                  name="sp-btnradio"
+                  id="sp-btnradio3"
+                  autocomplete="off"
+                  value="C"
+                />
+                <label class="sp-label" for="sp-btnradio3"
+                  ><img
+                    src="./assets/images/sp-C.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+              </div>
+            </div>
+
+            <!-- villa main door -->
+            <div class="group" id="vm">
+              <h6>villa main door</h6>
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic radio toggle button group"
+              >
+                <input
+                  type="radio"
+                  class="btn-check vm-input"
+                  name="vm-btnradio"
+                  id="vm-btnradio1"
+                  autocomplete="off"
+                  checked
+                  value="A"
+                />
+                <label class="vm-label" for="vm-btnradio1"
+                  ><img
+                    src="./assets/images/vm-A.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+
+                <input
+                  type="radio"
+                  class="btn-check vm-input"
+                  name="vm-btnradio"
+                  id="vm-btnradio2"
+                  autocomplete="off"
+                  value="B"
+                />
+                <label class="vm-label" for="vm-btnradio2"
+                  ><img
+                    src="./assets/images/vm-B.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+
+                <input
+                  type="radio"
+                  class="btn-check vm-input"
+                  name="vm-btnradio"
+                  id="vm-btnradio3"
+                  autocomplete="off"
+                  value="C"
+                />
+                <label class="vm-label" for="vm-btnradio3"
+                  ><img
+                    src="./assets/images/vm-C.jpg"
+                    width="70px"
+                    height="20px"
+                    alt=""
+                /></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/axios.min.js"></script>
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/customize.js"></script>
+  </body>
+</html>

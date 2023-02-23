@@ -47,6 +47,7 @@ const addUnit = asyncWrapper(async (req, res, next) => {
   console.log(req.body);
   const unit = await Unit.create({
     fileName: req.body.fileName,
+    pdf: req.body.pdf,
     woodenLouvers: req.body.woodenLouvers,
     aluminumColor: req.body.aluminumColor,
     villaMainDoor: req.body.villaMainDoor,

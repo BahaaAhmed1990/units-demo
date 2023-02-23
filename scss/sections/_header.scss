@@ -1,4 +1,15 @@
 header {
-  width: 90%;
-  margin: 0px auto;
+  #navbarNav {
+    justify-content: end;
+    .nav-item {
+      margin-left: 25px;
+
+      .nav-link:hover {
+        border-bottom: 2px solid black;
+      }
+      .nav-link.active {
+        border-bottom: 2px solid black;
+      }
+    }
+  }
 }

@@ -11608,9 +11608,17 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-header {
-  width: 90%;
-  margin: 0px auto;
+header #navbarNav {
+  justify-content: end;
+}
+header #navbarNav .nav-item {
+  margin-left: 25px;
+}
+header #navbarNav .nav-item .nav-link:hover {
+  border-bottom: 2px solid black;
+}
+header #navbarNav .nav-item .nav-link.active {
+  border-bottom: 2px solid black;
 }
 
 #unit-types .container {
@@ -11688,6 +11696,47 @@ header {
 #label-9 {
   bottom: 556px;
   left: 150px;
+}
+
+#slide-show {
+  height: 80vh;
+  margin: 40px auto;
+  overflow: hidden;
+}
+#slide-show .group {
+  margin-bottom: 40px;
+}
+#slide-show .group h6, #slide-show .group .h6 {
+  margin-bottom: 0;
+}
+#slide-show .group input[type=radio]:checked + label {
+  border: 2px dashed darkcyan;
+}
+#slide-show .group label:hover {
+  opacity: 0.8;
+}
+#slide-show .group label.active {
+  border: 1px solid blue;
+}
+#slide-show .group .tb-label,
+#slide-show .group .wl-label,
+#slide-show .group .sp-label,
+#slide-show .group .vm-label,
+#slide-show .group .ac-label {
+  margin-right: 20px;
+  cursor: pointer;
+}
+#slide-show .group .ac-label[for=ac-btnradio1] {
+  padding: 10px 35px;
+  background: repeat padding-box border-box 0%/auto scroll linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)), #6298aa;
+}
+#slide-show .group .ac-label[for=ac-btnradio2] {
+  padding: 10px 35px;
+  background: repeat padding-box border-box 0%/auto scroll linear-gradient(#e8e6e6, #e8e6e6), #6298aa;
+}
+#slide-show .group .ac-label[for=ac-btnradio3] {
+  padding: 10px 35px;
+  background: repeat padding-box border-box 0%/auto scroll linear-gradient(#dfc7a7, #dfc7a7), #6298aa;
 }
 
 /*# sourceMappingURL=style.css.map */

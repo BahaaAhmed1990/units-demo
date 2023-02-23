@@ -21,6 +21,20 @@ app.use(express.static(path.join(__dirname, "../frontend")));
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../", "frontend", "index.html"));
 });
+app.get("/customize-unit", (req, res) => {
+  res.sendFile(
+    path.resolve(__dirname, "../", "frontend", "customize-unit.html")
+  );
+});
+app.get("/virtual-tour", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../", "frontend", "virtual-tour.html"));
+});
+app.get("/unit-types", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../", "frontend", "unit-types.html"));
+});
+app.get("/book-now", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../", "frontend", "book-now.html"));
+});
 
 // app.use(notFound);
 // app.use(errHandler);
