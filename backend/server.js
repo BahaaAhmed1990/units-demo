@@ -18,7 +18,7 @@ app.use("/api/units", unitRoute);
 // serve frontend
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../", "frontend", "index.html"));
 });
 

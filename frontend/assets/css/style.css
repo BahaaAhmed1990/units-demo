@@ -11621,10 +11621,6 @@ header {
   max-width: initial !important;
 }
 
-#table {
-  display: flex;
-  align-items: end;
-}
 #table thead {
   vertical-align: middle;
   font-size: 11px;
@@ -11635,6 +11631,7 @@ header {
 
 .table {
   font-size: 12px;
+  padding-top: 50px;
 }
 
 .my-label {

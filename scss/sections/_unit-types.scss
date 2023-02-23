@@ -7,8 +7,6 @@
   max-width: initial !important;
 }
 #table {
-  display: flex;
-  align-items: end;
   thead {
     vertical-align: middle;
     font-size: 11px;
@@ -19,6 +17,7 @@
 }
 .table {
   font-size: 12px;
+  padding-top: 50px;
 }
 .my-label {
   background-color: #4074999e;

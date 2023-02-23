@@ -130,3 +130,12 @@ fetch(fullUrl)
       });
     });
   });
+
+// pin the table
+ScrollTrigger.create({
+  trigger: "#table",
+  pin: true,
+  onEnter: () => {
+    console.log(" enter");
+  },
+});
