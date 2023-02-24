@@ -73,7 +73,12 @@ function addCarouselContents(data) {
   }
 }
 
-// 2.fetch data
+// 2.add path to download button
+function addLinkPath(data) {
+  document
+    .querySelector("#down-load-btn")
+    .setAttribute("href", `/assets/pdf/${data[0].pdf}`);
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   axios
@@ -91,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .then(function (res) {
       addCarouselContents(res.data);
+      addLinkPath(res.data);
     })
     .catch(function (err) {
       console.log(err);

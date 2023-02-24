@@ -11703,6 +11703,9 @@ header #navbarNav .nav-item .nav-link.active {
   margin: 40px auto;
   overflow: hidden;
 }
+#slide-show #vm {
+  margin-bottom: 10px;
+}
 #slide-show .group {
   margin-bottom: 40px;
 }
