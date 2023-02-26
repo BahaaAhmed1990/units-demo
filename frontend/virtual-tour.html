@@ -48,9 +48,202 @@
         </div>
       </nav>
     </header>
+
+    <!-- location -->
+    <section id="location">
+      <div class="container">
+        <!-- location img -->
+        <div class="row">
+          <div class="col">
+            <img src="./assets/images/location.webp" alt="" class="img-fluid" />
+          </div>
+        </div>
+
+        <!-- location dets -->
+        <div class="row">
+          <div class="col d-flex" id="location-dets">
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong> 15 Mins</strong> <br />
+                  Dabaa Road
+                </p>
+              </li>
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong> 30 Mins</strong> <br />
+                  Sidi AbdelRahman
+                </p>
+              </li>
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong> 35 Mins</strong> <br />
+                  Sidi Heneish
+                </p>
+              </li>
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong> 40 Mins</strong> <br />
+                  El Alamein Airport
+                </p>
+              </li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong> 1 Hour</strong> <br />
+                  Marsa Matrouh
+                </p>
+              </li>
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong> 2 Hour</strong> <br />
+                  Alexandria
+                </p>
+              </li>
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong>2 Hour</strong> <br />
+                  Borg Alarab Airport
+                </p>
+              </li>
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong> 3.5 Hour</strong> <br />
+                  cairo
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- project zones -->
+    <section id="zones">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <div class="position-relative d-inline-block">
+              <img
+                width="753"
+                height="482"
+                src="./assets/images/zons.jpg"
+                alt="3 bedroom"
+                class="img-thumbnail"
+              />
+              <span class="position-absolute my-label" id="z-label-1"></span>
+              <span class="position-absolute my-label" id="z-label-2"></span>
+              <span class="position-absolute my-label" id="z-label-3"></span>
+              <span class="position-absolute my-label" id="z-label-4"></span>
+              <span class="position-absolute my-label" id="z-label-5"></span>
+            </div>
+            <div class="para d-flex">
+              <p class="para-1 position-relative">Cabanas</p>
+              <p class="para-2 position-relative">TheMediterranen</p>
+              <p class="para-3 position-relative">TheWaterfall</p>
+              <p class="para-4 position-relative">TheLagoones</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- cabans zone -->
+    <section id="cabans">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-8">
+            <div class="position-relative d-inline-block">
+              <img
+                width="753"
+                height="482"
+                src="./assets/images/zons.jpg"
+                alt="3 bedroom"
+                class="img-thumbnail"
+              />
+              <span
+                class="position-absolute my-label"
+                id="label-1"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                ><a>1</a>
+              </span>
+              <span
+                class="position-absolute my-label"
+                id="label-2"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >2</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-3"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >3</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-4"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >4</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-5"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >5</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-6"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >6</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-7"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >7</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-8"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >8</span
+              >
+              <span
+                class="position-absolute my-label"
+                id="label-9"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                >9</span
+              >
+            </div>
+          </div>
+          <div class="col-4" id="table">
+            <table class="table">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">unit code</th>
+                  <th scope="col">room</th>
+                  <th scope="col">type name</th>
+                  <th scope="col">sellabel area</th>
+                </tr>
+              </thead>
+              <tbody id="tabel-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/axios.min.js"></script>
-    <script src="./assets/js/gsap.min.js"></script>
-    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/virtual-tour.js"></script>
   </body>
 </html>

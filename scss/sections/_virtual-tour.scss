@@ -1,0 +1,143 @@
+#location {
+  padding-top: 10px;
+
+  .row:first-child {
+    height: 70vh;
+    overflow: hidden;
+  }
+  #location-dets {
+    justify-content: space-between;
+  }
+}
+
+#zones {
+  margin-top: 30px;
+
+  img {
+    max-width: initial;
+  }
+  .my-label {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  #z-label-1 {
+    bottom: 119px;
+    background-color: #3d9be9;
+    left: 232px;
+  }
+  #z-label-2 {
+    bottom: 119px;
+    background-color: #616161;
+    left: 432px;
+  }
+  #z-label-3 {
+    bottom: 119px;
+    background-color: #bf5666;
+    left: 632px;
+  }
+  #z-label-4 {
+    bottom: 372px;
+    background-color: #bf5666;
+    left: 560px;
+  }
+  #z-label-5 {
+    bottom: 244px;
+    background-color: yellow;
+    left: 692px;
+  }
+  .para {
+    justify-content: center;
+    margin-top: 25px;
+  }
+  .para > * {
+    margin-right: 80px;
+  }
+  .para-1::before,
+  .para-2::before,
+  .para-3::before,
+  .para-4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-150%, -50%);
+  }
+  .para-1::before {
+    background-color: #3d9be9;
+  }
+  .para-2::before {
+    background-color: #616161;
+  }
+  .para-3::before {
+    background-color: #bf5666;
+  }
+  .para-4::before {
+    background-color: yellow;
+  }
+}
+
+#cabans {
+  margin-top: 20px;
+  img {
+    max-width: initial;
+  }
+
+  .my-label {
+    font-size: 8px;
+    display: block;
+    width: 20px;
+    height: 15px;
+    transform: rotate(353deg);
+    font-weight: normal;
+    cursor: pointer;
+    text-align: center;
+    color: #9f6b28;
+    border: 1px solid #9f6b28;
+    background: rgba(228, 232, 21, 0.9);
+    visibility: hidden;
+  }
+  #label-1 {
+    bottom: 35px;
+    left: 328px;
+  }
+  #label-2 {
+    bottom: 51px;
+    left: 325px;
+  }
+  #label-3 {
+    bottom: 67px;
+    left: 324px;
+  }
+  #label-4 {
+    bottom: 83px;
+    left: 322px;
+  }
+  #label-5 {
+    bottom: 101px;
+    left: 320px;
+  }
+  #label-6 {
+    bottom: 113px;
+    left: 319px;
+  }
+  #label-7 {
+    bottom: 128px;
+    left: 318px;
+  }
+  #label-8 {
+    bottom: 141px;
+    left: 313px;
+  }
+  #label-9 {
+    bottom: 151px;
+    left: 312px;
+  }
+  #table {
+    font-size: 14px;
+  }
+}
