@@ -1,0 +1,51 @@
+#unit-content {
+  margin-top: 40px;
+  #unit-dets {
+    padding-top: 60px;
+    background-color: #d3d3d3;
+    .price {
+      margin: 20px 0;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: capitalize;
+    }
+    .price::first-letter {
+      font-size: large;
+    }
+    div {
+      justify-content: space-around;
+    }
+    #properties {
+      color: #666;
+      font-weight: 700;
+
+      span {
+        color: #999;
+        font-weight: normal;
+      }
+    }
+    #percentage,
+    #year {
+      p {
+        display: inline-block;
+        background-color: #aaa;
+        padding: 5px 8px;
+      }
+    }
+    #link {
+      margin-top: 20px;
+    }
+  }
+}
+
+#unit-img {
+  margin-top: 30px;
+  padding-bottom: 50px;
+  .container {
+    background-color: #d3d3d3;
+    padding-top: 20px;
+  }
+  iframe {
+    margin: 70px;
+  }
+}

@@ -11818,4 +11818,53 @@ header #navbarNav .nav-item .nav-link.active {
   font-size: 14px;
 }
 
+#unit-content {
+  margin-top: 40px;
+}
+#unit-content #unit-dets {
+  padding-top: 60px;
+  background-color: #d3d3d3;
+}
+#unit-content #unit-dets .price {
+  margin: 20px 0;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+#unit-content #unit-dets .price::first-letter {
+  font-size: large;
+}
+#unit-content #unit-dets div {
+  justify-content: space-around;
+}
+#unit-content #unit-dets #properties {
+  color: #666;
+  font-weight: 700;
+}
+#unit-content #unit-dets #properties span {
+  color: #999;
+  font-weight: normal;
+}
+#unit-content #unit-dets #percentage p,
+#unit-content #unit-dets #year p {
+  display: inline-block;
+  background-color: #aaa;
+  padding: 5px 8px;
+}
+#unit-content #unit-dets #link {
+  margin-top: 20px;
+}
+
+#unit-img {
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+#unit-img .container {
+  background-color: #d3d3d3;
+  padding-top: 20px;
+}
+#unit-img iframe {
+  margin: 70px;
+}
+
 /*# sourceMappingURL=style.css.map */

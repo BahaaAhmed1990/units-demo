@@ -32,6 +32,9 @@ app.get("/virtual-tour", (req, res) => {
 app.get("/unit-types", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../", "frontend", "unit-types.html"));
 });
+app.get("/unit-types/:type", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../", "frontend", "unit.html"));
+});
 app.get("/book-now", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../", "frontend", "book-now.html"));
 });
