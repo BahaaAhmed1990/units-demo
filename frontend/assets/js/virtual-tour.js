@@ -25,7 +25,6 @@ fetch(fullUrl)
     rows.map((row) => {
       if (row.c[1].v === "available") {
         let unitId = `#label-${row.c[0].v}`;
-        console.log(document.querySelector(unitId));
         document.querySelector(unitId).style.visibility = "visible";
       }
       // if (row.c[1].v === "sold") {

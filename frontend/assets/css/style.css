@@ -11621,6 +11621,18 @@ header #navbarNav .nav-item .nav-link.active {
   border-bottom: 2px solid black;
 }
 
+#types {
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+#types img {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#types img:hover {
+  filter: grayscale(50%);
+}
+
 #slide-show {
   height: 80vh;
   margin: 40px auto;
