@@ -11778,44 +11778,82 @@ header #navbarNav .nav-item .nav-link.active {
   background: rgba(228, 232, 21, 0.9);
   visibility: hidden;
 }
-#cabans #label-1 {
+#cabans #A-SA-101 {
   bottom: 35px;
   left: 328px;
 }
-#cabans #label-2 {
+#cabans #A-SA-102 {
   bottom: 51px;
   left: 325px;
 }
-#cabans #label-3 {
+#cabans #A-SA-103 {
   bottom: 67px;
   left: 324px;
 }
-#cabans #label-4 {
+#cabans #A-SA-104 {
   bottom: 83px;
   left: 322px;
 }
-#cabans #label-5 {
+#cabans #A-SA-105 {
   bottom: 101px;
   left: 320px;
 }
-#cabans #label-6 {
+#cabans #A-SA-106 {
   bottom: 113px;
   left: 319px;
 }
-#cabans #label-7 {
+#cabans #A-SA-107 {
   bottom: 128px;
   left: 318px;
 }
-#cabans #label-8 {
+#cabans #A-SA-108 {
   bottom: 141px;
   left: 313px;
 }
-#cabans #label-9 {
+#cabans #A-SA-109 {
   bottom: 151px;
   left: 312px;
 }
 #cabans #table {
   font-size: 14px;
+}
+
+#unit-info {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: whitesmoke;
+  display: none;
+}
+#unit-info .tab {
+  float: right;
+  background-color: #f1f1f1;
+}
+#unit-info .tab button {
+  display: block;
+  background-color: #d3d3d3;
+  color: black;
+  width: 6em;
+  border: 1px solid rgba(187, 187, 187, 0.2666666667);
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+#unit-info .tab button:hover {
+  background-color: #ddd;
+}
+#unit-info .tab button.active {
+  background-color: #ccc;
+}
+#unit-info .tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-right: none;
 }
 
 #unit-content {

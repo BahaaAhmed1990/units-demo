@@ -162,69 +162,15 @@
                 alt="3 bedroom"
                 class="img-thumbnail"
               />
-              <span
-                class="position-absolute my-label"
-                id="label-1"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                ><a>1</a>
-              </span>
-              <span
-                class="position-absolute my-label"
-                id="label-2"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                >2</span
-              >
-              <span
-                class="position-absolute my-label"
-                id="label-3"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                >3</span
-              >
-              <span
-                class="position-absolute my-label"
-                id="label-4"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                >4</span
-              >
-              <span
-                class="position-absolute my-label"
-                id="label-5"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                >5</span
-              >
-              <span
-                class="position-absolute my-label"
-                id="label-6"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                >6</span
-              >
-              <span
-                class="position-absolute my-label"
-                id="label-7"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                >7</span
-              >
-              <span
-                class="position-absolute my-label"
-                id="label-8"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                >8</span
-              >
-              <span
-                class="position-absolute my-label"
-                id="label-9"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                >9</span
-              >
+              <span class="position-absolute my-label" id="A-SA-101">1 </span>
+              <span class="position-absolute my-label" id="A-SA-102">2</span>
+              <span class="position-absolute my-label" id="A-SA-103">3</span>
+              <span class="position-absolute my-label" id="A-SA-104">4</span>
+              <span class="position-absolute my-label" id="A-SA-105">5</span>
+              <span class="position-absolute my-label" id="A-SA-106">6</span>
+              <span class="position-absolute my-label" id="A-SA-107">7</span>
+              <span class="position-absolute my-label" id="A-SA-108">8</span>
+              <span class="position-absolute my-label" id="A-SA-109">9</span>
             </div>
           </div>
           <div class="col-4" id="table">
@@ -239,6 +185,69 @@
               </thead>
               <tbody id="tabel-body"></tbody>
             </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- unit details -->
+
+    <section id="unit-info" class="position-fixed">
+      <div class="clearfix">
+        <button id="unit-info-close" class="btn btn-primary float-end">
+          X
+        </button>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-7">
+            <div class="tab">
+              <button
+                class="tablinks"
+                id="defaultOpen"
+                onclick="openTab(event, 'interior')"
+              >
+                360 interior
+              </button>
+              <button class="tablinks" onclick="openTab(event, 'extrior')">
+                360 extrior
+              </button>
+              <button class="tablinks" onclick="openTab(event, 'balcony')">
+                balcony view
+              </button>
+              <button class="tablinks" onclick="openTab(event, 'apartement')">
+                apartement view
+              </button>
+              <button class="tablinks" onclick="openTab(event, 'builiding')">
+                builiding view
+              </button>
+            </div>
+
+            <div id="interior" class="tabcontent">
+              <h3>360 interior image</h3>
+            </div>
+
+            <div id="extrior" class="tabcontent">
+              <h3>360 exterior image</h3>
+            </div>
+
+            <div id="balcony" class="tabcontent">
+              <h3>balcony image</h3>
+            </div>
+
+            <div id="apartement" class="tabcontent">
+              <img id="apartement-img" src="" />
+            </div>
+
+            <div id="builiding" class="tabcontent">
+              <img id="builiding-img" src="" alt="" />
+            </div>
+          </div>
+
+          <!-- ******************** -->
+
+          <div class="col-5">
+            <img src="" id="default-img" alt="" />
           </div>
         </div>
       </div>

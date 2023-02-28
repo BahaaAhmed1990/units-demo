@@ -101,43 +101,83 @@
     background: rgba(228, 232, 21, 0.9);
     visibility: hidden;
   }
-  #label-1 {
+  #A-SA-101 {
     bottom: 35px;
     left: 328px;
   }
-  #label-2 {
+  #A-SA-102 {
     bottom: 51px;
     left: 325px;
   }
-  #label-3 {
+  #A-SA-103 {
     bottom: 67px;
     left: 324px;
   }
-  #label-4 {
+  #A-SA-104 {
     bottom: 83px;
     left: 322px;
   }
-  #label-5 {
+  #A-SA-105 {
     bottom: 101px;
     left: 320px;
   }
-  #label-6 {
+  #A-SA-106 {
     bottom: 113px;
     left: 319px;
   }
-  #label-7 {
+  #A-SA-107 {
     bottom: 128px;
     left: 318px;
   }
-  #label-8 {
+  #A-SA-108 {
     bottom: 141px;
     left: 313px;
   }
-  #label-9 {
+  #A-SA-109 {
     bottom: 151px;
     left: 312px;
   }
   #table {
     font-size: 14px;
+  }
+}
+
+#unit-info {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: whitesmoke;
+  display: none;
+  .tab {
+    float: right;
+    background-color: #f1f1f1;
+
+    button {
+      display: block;
+      background-color: #d3d3d3;
+      color: black;
+      width: 6em;
+      border: 1px solid #bbb4;
+      outline: none;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+      &:hover {
+        background-color: #ddd;
+      }
+      &.active {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-right: none;
   }
 }
