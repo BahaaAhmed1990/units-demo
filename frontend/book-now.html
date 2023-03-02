@@ -48,9 +48,80 @@
         </div>
       </nav>
     </header>
+
+    <!-- form  -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="alert alert-success" role="alert">Message Sent</div>
+            <div class="alert alert-warning" role="alert">
+              Something Went Wrong please try again
+            </div>
+            <form>
+              <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="First Name"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Last Name"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@example.com"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  placeholder="01----"
+                />
+              </div>
+
+              <div class="mb-3">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  id="unitCode"
+                >
+                  <option selected>unit code</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+
+              <div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/axios.min.js"></script>
-    <script src="./assets/js/gsap.min.js"></script>
-    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/book.js"></script>
   </body>
 </html>

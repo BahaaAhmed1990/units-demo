@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
 const unitRoute = require("./routes/unitRoute");
+const mailRoute = require("./routes/mailRoute");
 require("dotenv").config();
 const connectDB = require("./config/db");
 
@@ -15,6 +16,7 @@ connectDB();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/api/units", unitRoute);
+app.use("/api/mail", mailRoute);
 // serve frontend
 app.use(express.static(path.join(__dirname, "../frontend")));
 

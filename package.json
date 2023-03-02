@@ -11,13 +11,14 @@
   "author": "Bahaa Ahmed",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^5.3.0-alpha1",
     "nodemon": "^2.0.20",
-    "sass": "^1.58.0",
-    "bootstrap": "^5.3.0-alpha1"
+    "sass": "^1.58.0"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^6.9.1"
+    "mongoose": "^6.9.1",
+    "nodemailer": "^6.9.1"
   }
 }
