@@ -154,26 +154,77 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-8">
-            <div class="position-relative d-inline-block">
-              <img
-                width="753"
-                height="482"
-                src="./assets/images/zons.jpg"
-                alt="3 bedroom"
-                class="img-thumbnail"
-              />
-              <span class="position-absolute my-label" id="A-SA-101">1 </span>
-              <span class="position-absolute my-label" id="A-SA-102">2</span>
-              <span class="position-absolute my-label" id="A-SA-103">3</span>
-              <span class="position-absolute my-label" id="A-SA-104">4</span>
-              <span class="position-absolute my-label" id="A-SA-105">5</span>
-              <span class="position-absolute my-label" id="A-SA-106">6</span>
-              <span class="position-absolute my-label" id="A-SA-107">7</span>
-              <span class="position-absolute my-label" id="A-SA-108">8</span>
-              <span class="position-absolute my-label" id="A-SA-109">9</span>
+            <div class="position-relative">
+              <div class="wrapper-1 position-absolute">
+                <img
+                  width="852"
+                  height="480"
+                  src="./assets/images/Screenshot (2).png"
+                  alt="3 bedroom"
+                />
+                <span class="position-absolute my-label" id="A-SA-101">1 </span>
+                <span class="position-absolute my-label" id="A-SA-102">2</span>
+                <span class="position-absolute my-label" id="A-SA-103">3</span>
+                <span class="position-absolute my-label" id="A-SA-104">4</span>
+                <span class="position-absolute my-label" id="A-SA-105">5</span>
+                <span class="position-absolute my-label" id="A-SA-106">6</span>
+                <span class="position-absolute my-label" id="A-SA-107">7</span>
+                <span class="position-absolute my-label" id="A-SA-108">8</span>
+                <span class="position-absolute my-label" id="A-SA-109">9</span>
+              </div>
+
+              <div class="wrapper-2 position-absolute">
+                <img
+                  width="852"
+                  height="480"
+                  src="./assets/images/Screenshot (3).png"
+                  alt="3 bedroom"
+                />
+              </div>
+
+              <video
+                class="position-absolute"
+                width="852px"
+                height="480px"
+                id="vid-1"
+                muted
+              >
+                <source src="./assets/videos/vid-1.mp4" type="video/mp4" />
+              </video>
+
+              <button class="position-absolute" id="btn-1">&gt;</button>
+              <button class="position-absolute" id="btn-2">&lt;</button>
             </div>
           </div>
           <div class="col-4" id="table">
+            <form class="mb-1">
+              <div>
+                <label for="room-range" class="form-label">Room</label>
+                <input
+                  type="range"
+                  class="form-range"
+                  min="0"
+                  max="6"
+                  step="1"
+                  id="room-range"
+                  value="0"
+                />
+              </div>
+
+              <div>
+                <select
+                  id="type-range"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option value="all" selected>all</option>
+                  <option value="6RB">6 bedroom</option>
+                  <option value="5RB">5 bedroom</option>
+                </select>
+              </div>
+
+              <button id="clear-btn">clear all filters</button>
+            </form>
             <table class="table">
               <thead class="table-dark">
                 <tr>

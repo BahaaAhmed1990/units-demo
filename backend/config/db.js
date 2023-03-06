@@ -8,7 +8,7 @@ const connectDB = async () => {
     console.log(`DB is connected at ${conn.connection.host}`);
   } catch (error) {
     console.log(error.code);
-    process.exit(1);
+    // process.exit(1);
   }
 };
 
