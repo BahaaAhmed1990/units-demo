@@ -11693,35 +11693,15 @@ header #navbarNav .nav-item .nav-link.active {
 #location #controls #list {
   display: block;
 }
-#location #controls #list.active {
-  animation: show 1s ease-in-out;
-  animation-fill-mode: forwards;
+#location #controls #list button {
+  display: block;
+  border: 1px solid #3e3c3c;
+  border-radius: 2px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 1px;
 }
-#location #controls #list.hide {
-  animation: hide 1s ease-in-out;
-  animation-fill-mode: forwards;
-}
-@keyframes show {
-  from {
-    height: 0%;
-    display: none;
-  }
-  to {
-    height: 100%;
-    display: block;
-  }
-}
-@keyframes hide {
-  from {
-    height: 100%;
-    display: block;
-  }
-  to {
-    height: 0%;
-    display: none;
-  }
-}
-#location #controls button {
+#location #controls #control-btn {
   display: block;
   border: 1px solid #3e3c3c;
   border-radius: 2px;
@@ -11732,6 +11712,16 @@ header #navbarNav .nav-item .nav-link.active {
 #location #controls #control-btn p {
   margin: 0px auto;
   transform: rotateZ(270deg);
+}
+#location .path svg {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: animateDash 2s linear forwards;
+}
+@keyframes animateDash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 #location #airport-mark {
   left: 42.8%;

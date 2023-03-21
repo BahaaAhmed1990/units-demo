@@ -17,47 +17,36 @@
 
     #list {
       display: block;
-      &.active {
-        animation: show 1s ease-in-out;
-        animation-fill-mode: forwards;
-      }
-      &.hide {
-        animation: hide 1s ease-in-out;
-        animation-fill-mode: forwards;
-      }
-    }
-    @keyframes show {
-      from {
-        height: 0%;
-        display: none;
-      }
-      to {
-        height: 100%;
+      button {
         display: block;
+        border: 1px solid #3e3c3c;
+        border-radius: 2px;
+        outline: none;
+        width: 100%;
+        margin-bottom: 1px;
       }
     }
-    @keyframes hide {
-      from {
-        height: 100%;
-        display: block;
-      }
-      to {
-        height: 0%;
-        display: none;
-      }
-    }
-    button {
+    #control-btn {
       display: block;
       border: 1px solid #3e3c3c;
       border-radius: 2px;
       outline: none;
       width: 100%;
       margin-bottom: 1px;
-    }
-    #control-btn {
       p {
         margin: 0px auto;
         transform: rotateZ(270deg);
+      }
+    }
+  }
+  .path svg {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: animateDash 2s linear forwards;
+
+    @keyframes animateDash {
+      to {
+        stroke-dashoffset: 0;
       }
     }
   }
