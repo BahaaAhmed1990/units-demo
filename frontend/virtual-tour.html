@@ -51,11 +51,134 @@
 
     <!-- location -->
     <section id="location">
-      <div class="container">
+      <div class="container-fluid">
         <!-- location img -->
         <div class="row">
-          <div class="col">
-            <img src="./assets/images/location.webp" alt="" class="img-fluid" />
+          <div class="position-relative">
+            <div class="location-img">
+              <img src="./assets/images/location.jpg" alt="" />
+            </div>
+
+            <div class="position-absolute" id="controls">
+              <div class="active" id="list">
+                <button id="mark-btn">landmarks</button
+                ><button id="road-btn">roads</button
+                ><button id="mosque-btn">mosques</button>
+              </div>
+              <button id="control-btn"><p>&gt;</p></button>
+            </div>
+
+            <div
+              class="location-marks position-absolute active"
+              id="airport-mark"
+            >
+              <svg
+                width="32"
+                height="45"
+                viewBox="0 0 64 95"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.6"
+                  d="M32.0973 94.7505C32.0973 94.7505 47.1315 75.4747 58.6174 53.0953C70.1033 30.7158 61.442 12.1207 44.3757 3.89312C29.4074 -2.55087 11.4341 3.89314 3.89098 19.0311C-0.936797 30.376 -1.37454 34.9468 4.30867 49.8319C9.99188 64.7171 32.0973 94.7505 32.0973 94.7505Z"
+                  fill="#000"
+                ></path>
+              </svg>
+            </div>
+
+            <div class="path position-absolute d-none" id="airport-path">
+              <svg
+                width="100"
+                height="68"
+                viewBox="0 0 100 68"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 2C12.5 2.16667 35.7 3.6 36.5 8C37.5 13.5 64 2 76 8C85.6 12.8 94.6667 14.6667 98 15C98 23 98 39.3 98 40.5C98 41.7 91 58.3333 87.5 66.5"
+                  stroke="black"
+                  stroke-width="4"
+                />
+              </svg>
+            </div>
+
+            <div class="position-absolute d-none" id="airport-dets">
+              <p class="text-center text-white">
+                <strong> 15 Mins</strong> <br />
+                airport
+              </p>
+            </div>
+
+            <div
+              class="location-marks position-absolute active"
+              id="matroh-mark"
+            >
+              <p></p>
+              <svg
+                width="32"
+                height="45"
+                viewBox="0 0 64 95"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.6"
+                  d="M32.0973 94.7505C32.0973 94.7505 47.1315 75.4747 58.6174 53.0953C70.1033 30.7158 61.442 12.1207 44.3757 3.89312C29.4074 -2.55087 11.4341 3.89314 3.89098 19.0311C-0.936797 30.376 -1.37454 34.9468 4.30867 49.8319C9.99188 64.7171 32.0973 94.7505 32.0973 94.7505Z"
+                  fill="#000"
+                ></path>
+              </svg>
+            </div>
+            <div class="path position-absolute d-none" id="matroh-path">
+              <svg
+                width="322"
+                height="91"
+                viewBox="0 0 322 91"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M322 84.5H285.5C278.5 87.8333 264.4 92.5 264 84.5C263.6 76.5 246.5 76.1667 238 77L206 65L168 56.5L116.5 37.5L78.5 31L48.5 2.5C36.8333 3.5 11.1 6.5 1.5 10.5"
+                  stroke="black"
+                  stroke-width="4"
+                />
+              </svg>
+            </div>
+
+            <div class="position-absolute d-none" id="matroh-dets">
+              <p class="text-center text-white">
+                <strong> 1 Hour</strong> <br />
+                Marsa Matrouh
+              </p>
+            </div>
+
+            <div class="position-absolute d-none" id="main-road">
+              <p class="text-white">main road</p>
+            </div>
+            <!-- mosques -->
+            <div class="position-absolute d-none" id="mosque">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22Z"
+                  fill="rgb(187, 112, 166)"
+                  fill-opacity="0.9528"
+                ></path>
+                <path
+                  d="M10.6719 8.12672C10.6719 8.20881 10.6719 8.29089 10.754 8.37298L11.8211 9.44015L11.5749 10.9178C11.5749 11.0819 11.6569 11.164 11.739 11.164C11.8211 11.164 11.8211 11.164 11.9032 11.164L13.2167 10.5073L14.5301 11.164C14.6122 11.2461 14.7764 11.164 14.8584 11.0819C14.8584 10.9999 14.8584 10.9999 14.8584 10.9178L14.6122 9.44015L15.6793 8.37298C15.7614 8.29089 15.7614 8.12672 15.6793 8.04463C15.6793 8.04463 15.5972 7.96254 15.5152 7.96254L14.0375 7.71627L13.3808 6.40284C13.2987 6.32075 13.2167 6.23866 13.0525 6.32075C12.9704 6.32075 12.9704 6.40284 12.9704 6.40284L12.3137 7.71627L10.8361 7.96254C10.8361 8.04463 10.754 8.04463 10.6719 8.12672Z"
+                  fill="white"
+                ></path>
+                <path
+                  d="M18.141 10.1793C18.141 10.0151 18.0589 9.93306 17.8947 9.93306C17.7305 9.93306 17.6484 10.0151 17.6484 10.1793C17.3201 13.1346 14.6111 15.1868 11.738 14.8584C8.86486 14.5301 6.73053 11.8211 7.05889 8.94798C7.38725 6.4853 9.27531 4.59724 11.738 4.26888C11.9022 4.26888 11.9843 4.18679 11.9843 4.02261C11.9843 3.85843 11.9022 3.77634 11.738 3.77634C7.7977 3.3659 4.26785 6.23903 3.8574 10.1793C3.44695 14.1196 6.32008 17.6495 10.2604 18.0599C14.2007 18.4704 17.7305 15.5972 18.141 11.6569C18.141 11.4107 18.141 11.1644 18.141 10.9181C18.2231 10.6719 18.2231 10.4256 18.141 10.1793Z"
+                  fill="white"
+                ></path>
+              </svg>
+            </div>
           </div>
         </div>
 

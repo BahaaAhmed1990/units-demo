@@ -11680,9 +11680,93 @@ header #navbarNav .nav-item .nav-link.active {
 #location {
   padding-top: 10px;
 }
-#location .row:first-child {
-  height: 70vh;
-  overflow: hidden;
+#location .location-marks,
+#location .path {
+  z-index: 3;
+}
+#location #controls {
+  width: 100px;
+  background-color: #f1f1f1;
+  right: 10%;
+  top: 10%;
+}
+#location #controls #list {
+  display: block;
+}
+#location #controls #list.active {
+  animation: show 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+#location #controls #list.hide {
+  animation: hide 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes show {
+  from {
+    height: 0%;
+    display: none;
+  }
+  to {
+    height: 100%;
+    display: block;
+  }
+}
+@keyframes hide {
+  from {
+    height: 100%;
+    display: block;
+  }
+  to {
+    height: 0%;
+    display: none;
+  }
+}
+#location #controls button {
+  display: block;
+  border: 1px solid #3e3c3c;
+  border-radius: 2px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 1px;
+}
+#location #controls #control-btn p {
+  margin: 0px auto;
+  transform: rotateZ(270deg);
+}
+#location #airport-mark {
+  left: 42.8%;
+  top: 56%;
+}
+#location #airport-path {
+  left: 35.5%;
+  top: 49.7%;
+}
+#location #airport-dets {
+  left: 41.5%;
+  top: 43.7%;
+  transform: rotateZ(45deg);
+}
+#location #matroh-mark {
+  left: 10.8%;
+  top: 29%;
+}
+#location #matroh-path {
+  left: 11.7%;
+  top: 35.5%;
+}
+#location #matroh-dets {
+  left: 21.7%;
+  top: 46.5%;
+  transform: rotatez(14deg);
+}
+#location #main-road {
+  left: 39.7%;
+  top: 68.5%;
+  transform: rotateZ(45deg);
+}
+#location #mosque {
+  left: 32.7%;
+  top: 51.5%;
 }
 #location #location-dets {
   justify-content: space-between;

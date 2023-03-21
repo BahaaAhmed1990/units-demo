@@ -13,7 +13,95 @@ const clearBtn = document.querySelector("#clear-btn");
 const btnOne = document.querySelector("#btn-1");
 const btnTwo = document.querySelector("#btn-2");
 const vidOne = document.querySelector("#vid-1");
+const controlBtn = document.querySelector("#control-btn");
+const list = document.querySelector("#list");
+const markBtn = document.querySelector("#mark-btn");
+const roadBtn = document.querySelector("#road-btn");
+const mosBtn = document.querySelector("#mosque-btn");
+const airport = document.querySelector("#airport-mark");
+const matroh = document.querySelector("#matroh-mark");
 
+// menu button
+controlBtn.addEventListener("click", function () {
+  if (list.classList.contains("active")) {
+    console.log("first");
+    list.classList.replace("active", "hide");
+    list.setAttribute("style", "display:none");
+  } else {
+    list.classList.replace("hide", "active");
+    list.setAttribute("style", "display:block");
+  }
+});
+
+// landmark button
+markBtn.addEventListener("click", function () {
+  const marks = document.querySelectorAll(".location-marks");
+  [...marks].map((mark) => {
+    if (mark.classList.contains("active")) {
+      mark.classList.remove("active");
+      mark.setAttribute("style", "display:none");
+    } else {
+      mark.classList.add("active");
+      mark.setAttribute("style", "display:block");
+    }
+  });
+});
+
+// roads button
+roadBtn.addEventListener("click", function () {
+  const roads = document.querySelector("#main-road");
+
+  if (roads.classList.contains("d-none")) {
+    roads.classList.remove("d-none");
+    // roads.setAttribute("style", "display:none");
+  } else {
+    roads.classList.add("d-none");
+    // roads.setAttribute("style", "display:block");
+  }
+});
+
+// mosque button
+mosBtn.addEventListener("click", function () {
+  const mosque = document.querySelector("#mosque");
+
+  if (mosque.classList.contains("d-none")) {
+    mosque.classList.remove("d-none");
+    // mosque.setAttribute("style", "display:none");
+  } else {
+    mosque.classList.add("d-none");
+    // mosque.setAttribute("style", "display:block");
+  }
+});
+
+matroh.addEventListener("click", function () {
+  const path = document.querySelector("#matroh-path");
+  const dets = document.querySelector("#matroh-dets");
+
+  if (path.classList.contains("d-none")) {
+    path.classList.remove("d-none");
+    dets.classList.remove("d-none");
+    // path.setAttribute("style", "display:none");
+  } else {
+    path.classList.add("d-none");
+    dets.classList.add("d-none");
+    // mosque.setAttribute("style", "display:block");
+  }
+});
+
+airport.addEventListener("click", function () {
+  const path = document.querySelector("#airport-path");
+  const dets = document.querySelector("#airport-dets");
+
+  if (path.classList.contains("d-none")) {
+    path.classList.remove("d-none");
+    dets.classList.remove("d-none");
+    // path.setAttribute("style", "display:none");
+  } else {
+    path.classList.add("d-none");
+    dets.classList.add("d-none");
+    // mosque.setAttribute("style", "display:block");
+  }
+});
 // fetch google sheet
 const sheetId = "1dEy8bMqOo1cFngZpmf2hWQZpZedDITPXoGnAoTbxb2g";
 const sheetTitle = "state";
