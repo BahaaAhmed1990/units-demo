@@ -11765,43 +11765,73 @@ header #navbarNav .nav-item .nav-link.active {
 #zones {
   margin-top: 30px;
 }
-#zones img {
-  max-width: initial;
+#zones .hotspots {
+  position: relative;
 }
-#zones .my-label {
-  display: block;
-  width: 20px;
-  height: 20px;
+#zones .hotspots .control-btn {
+  z-index: 4;
+  top: 90%;
+  left: 5%;
+  width: 400px;
+}
+#zones .hotspots .control-btn .toggle-button {
+  display: flex;
+  align-items: center;
+}
+#zones .hotspots .control-btn .toggle-button div:first-child {
+  text-align: end;
+  padding-right: 10px;
+}
+#zones .hotspots .control-btn .toggle-switch {
+  background: linear-gradient(hsl(210deg, 78%, 56%), hsl(146deg, 68%, 55%));
+  transition: all 0.3s linear;
+}
+#zones .hotspots .control-btn .toggle-switch:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px black;
+}
+#zones .hotspots .control-btn #toggle-switch_body {
+  width: 9.5%;
+  border-radius: 1000px;
+  position: relative;
+  top: 2px;
+  height: 18px;
+}
+#zones .hotspots .control-btn #toggle-switch_trigger {
+  position: absolute;
+  width: 30%;
+  height: 68%;
+  top: 51%;
+  left: 9%;
+  transform: translateY(-50%);
+  background-color: hsl(230deg, 17%, 14%);
   border-radius: 50%;
+  transition: all 0.3s ease-in;
 }
-#zones #z-label-1 {
-  bottom: 119px;
-  background-color: #3d9be9;
-  left: 232px;
+#zones .hotspots .d3,
+#zones .hotspots .d2 {
+  z-index: 1;
 }
-#zones #z-label-2 {
-  bottom: 119px;
-  background-color: #616161;
-  left: 432px;
-}
-#zones #z-label-3 {
-  bottom: 119px;
-  background-color: #bf5666;
-  left: 632px;
-}
-#zones #z-label-4 {
-  bottom: 372px;
-  background-color: #bf5666;
-  left: 560px;
-}
-#zones #z-label-5 {
-  bottom: 244px;
-  background-color: yellow;
-  left: 692px;
+#zones .hotspots .d3.active,
+#zones .hotspots .d2.active {
+  z-index: 2;
 }
 #zones .para {
   justify-content: center;
   margin-top: 25px;
+}
+#zones .para-1,
+#zones .para-2,
+#zones .para-3,
+#zones .para-3 {
+  transition: all 0.3s ease-in-out;
+}
+#zones .para-1.active,
+#zones .para-2.active,
+#zones .para-3.active,
+#zones .para-3.active {
+  transform: scale(1.2);
+  font-weight: bold;
 }
 #zones .para > * {
   margin-right: 80px;

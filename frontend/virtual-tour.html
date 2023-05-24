@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>virtual-tour</title>
+
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -50,11 +51,11 @@
     </header>
 
     <!-- location -->
-    <section id="location">
+    <!-- <section id="location">
       <div class="container-fluid">
-        <!-- location img -->
-        <div class="row">
-          <div class="position-relative">
+         location img -->
+    <!-- <div class="row"> -->
+    <!-- <div class="position-relative">
             <div class="location-img">
               <img src="./assets/images/location.jpg" alt="" />
             </div>
@@ -154,8 +155,8 @@
             <div class="position-absolute d-none" id="main-road">
               <p class="text-white">main road</p>
             </div>
-            <!-- mosques -->
-            <div class="position-absolute d-none" id="mosque">
+            mosques -->
+    <!-- <div class="position-absolute d-none" id="mosque">
               <svg
                 width="22"
                 height="22"
@@ -178,11 +179,11 @@
                 ></path>
               </svg>
             </div>
-          </div>
-        </div>
+          </div> -->
+    <!-- </div> -->
 
-        <!-- location dets -->
-        <div class="row">
+    <!-- location dets -->
+    <!-- <div class="row">
           <div class="col d-flex" id="location-dets">
             <ul class="list-group list-group-horizontal">
               <li class="list-group-item">
@@ -238,33 +239,96 @@
             </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </div> -->
+    <!-- </section>   -->
 
     <!-- project zones -->
     <section id="zones">
-      <div class="container">
+      <div class="container-fluid">
+        <div class="row position-relative hotspots">
+          <div class="control-btn position-absolute">
+            <div class="toggle-button">
+              <div>
+                <span id="toggle-txt">2D</span>
+              </div>
+              <div class="toggle-switch" id="toggle-switch_body">
+                <div id="toggle-switch_trigger"></div>
+              </div>
+            </div>
+          </div>
+          <div class="d3 position-absolute">
+            <img
+              src="./assets/images/full-map-3d.jpg"
+              usemap="#image-map1"
+              class="map img-fluid"
+            />
+
+            <map name="image-map1">
+              <area
+                target=""
+                alt=""
+                title="cabans"
+                href=""
+                coords="212,175,719,83,736,77,744,69,746,59,742,44,722,23,693,2,532,2,188,36"
+                shape="poly"
+                id="d3-cabans"
+              /><area
+                target=""
+                alt="the mid"
+                title="the mid"
+                href=""
+                coords="221,188,723,105,746,107,766,119,773,136,783,148,798,157,816,170,841,175,829,192,835,208,852,218,868,232,874,247,859,267,869,302,886,313,917,321,956,383,949,437,253,478"
+                shape="poly"
+                id="d3-the-mid"
+              />
+            </map>
+          </div>
+          <div class="d2 position-absolute active">
+            <img
+              src="./assets/images/full-map-2d.jpg"
+              usemap="#image-map"
+              class="map img-fluid"
+            />
+
+            <map name="image-map">
+              <area
+                target=""
+                alt=""
+                title="water fall"
+                href=""
+                coords="603,462,582,231,588,221,591,202,623,209,636,207,648,214,658,207,666,211,676,205,690,197,701,192,718,202,730,202,739,212,739,226,758,218,791,215,855,231,861,241,856,420"
+                shape="poly"
+                id="d2-water-fall"
+              />
+              <area
+                target=""
+                alt="the mid"
+                title="the mid"
+                href=""
+                coords="362,213,513,188,531,196,546,209,550,232,581,457,387,485"
+                shape="poly"
+                id="d2-the-mid"
+              />
+              <area
+                target=""
+                alt="cabans"
+                title="cabans"
+                href=""
+                coords="230,487,198,223,347,209,378,492"
+                shape="poly"
+                id="d2-cabans"
+              />
+            </map>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
         <div class="row text-center">
           <div class="col">
-            <div class="position-relative d-inline-block">
-              <img
-                width="753"
-                height="482"
-                src="./assets/images/zons.jpg"
-                alt="3 bedroom"
-                class="img-thumbnail"
-              />
-              <span class="position-absolute my-label" id="z-label-1"></span>
-              <span class="position-absolute my-label" id="z-label-2"></span>
-              <span class="position-absolute my-label" id="z-label-3"></span>
-              <span class="position-absolute my-label" id="z-label-4"></span>
-              <span class="position-absolute my-label" id="z-label-5"></span>
-            </div>
             <div class="para d-flex">
               <p class="para-1 position-relative">Cabanas</p>
               <p class="para-2 position-relative">TheMediterranen</p>
               <p class="para-3 position-relative">TheWaterfall</p>
-              <p class="para-4 position-relative">TheLagoones</p>
             </div>
           </div>
         </div>
@@ -272,7 +336,7 @@
     </section>
 
     <!-- cabans zone -->
-    <section id="cabans">
+    <!-- <section id="cabans">
       <div class="container-fluid">
         <div class="row">
           <div class="col-8">
@@ -361,11 +425,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- unit details -->
 
-    <section id="unit-info" class="position-fixed">
+    <!-- <section id="unit-info" class="position-fixed">
       <div class="clearfix">
         <button id="unit-info-close" class="btn btn-primary float-end">
           X
@@ -417,15 +481,19 @@
             </div>
           </div>
 
-          <!-- ******************** -->
-
           <div class="col-5">
             <img src="" id="default-img" alt="" />
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/virtual-tour.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+    ></script>
+    <script src="./assets/js/jquery.maphighlight.js"></script>
+    <script src="./assets/js/jquery-rwdImageMaps.js"></script>
+    <script src="./assets/js/virtual-tour.js" defer></script>
   </body>
 </html>

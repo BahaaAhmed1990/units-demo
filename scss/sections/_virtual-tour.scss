@@ -93,43 +93,77 @@
 #zones {
   margin-top: 30px;
 
-  img {
-    max-width: initial;
-  }
-  .my-label {
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
-  #z-label-1 {
-    bottom: 119px;
-    background-color: #3d9be9;
-    left: 232px;
-  }
-  #z-label-2 {
-    bottom: 119px;
-    background-color: #616161;
-    left: 432px;
-  }
-  #z-label-3 {
-    bottom: 119px;
-    background-color: #bf5666;
-    left: 632px;
-  }
-  #z-label-4 {
-    bottom: 372px;
-    background-color: #bf5666;
-    left: 560px;
-  }
-  #z-label-5 {
-    bottom: 244px;
-    background-color: yellow;
-    left: 692px;
+  .hotspots {
+    position: relative;
+
+    .control-btn {
+      z-index: 4;
+      top: 90%;
+      left: 5%;
+      width: 400px;
+
+      .toggle-button {
+        display: flex;
+        align-items: center;
+      }
+      .toggle-button div:first-child {
+        text-align: end;
+        padding-right: 10px;
+      }
+      .toggle-switch {
+        background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+        transition: all 0.3s linear;
+      }
+      .toggle-switch:hover {
+        cursor: pointer;
+        box-shadow: 0 0 5px black;
+      }
+      #toggle-switch_body {
+        width: 9.5%;
+        border-radius: 1000px;
+        position: relative;
+        top: 2px;
+        height: 18px;
+      }
+      #toggle-switch_trigger {
+        position: absolute;
+        width: 30%;
+        height: 68%;
+        top: 51%;
+        left: 9%;
+        transform: translateY(-50%);
+        background-color: hsl(230, 17%, 14%);
+        border-radius: 50%;
+        transition: all 0.3s ease-in;
+      }
+    }
+
+    .d3,
+    .d2 {
+      z-index: 1;
+    }
+    .d3.active,
+    .d2.active {
+      z-index: 2;
+    }
+    img {
+      // max-width: 100%;
+    }
   }
   .para {
     justify-content: center;
     margin-top: 25px;
+  }
+
+  .para-1,
+  .para-2,
+  .para-3,
+  .para-3 {
+    transition: all 0.3s ease-in-out;
+    &.active {
+      transform: scale(1.2);
+      font-weight: bold;
+    }
   }
   .para > * {
     margin-right: 80px;

@@ -13,95 +13,220 @@ const clearBtn = document.querySelector("#clear-btn");
 const btnOne = document.querySelector("#btn-1");
 const btnTwo = document.querySelector("#btn-2");
 const vidOne = document.querySelector("#vid-1");
-const controlBtn = document.querySelector("#control-btn");
+// const controlBtn = document.querySelector("#control-btn");
 const list = document.querySelector("#list");
 const markBtn = document.querySelector("#mark-btn");
 const roadBtn = document.querySelector("#road-btn");
 const mosBtn = document.querySelector("#mosque-btn");
 const airport = document.querySelector("#airport-mark");
 const matroh = document.querySelector("#matroh-mark");
+const d3 = document.querySelector(".d3");
+const d2 = document.querySelector(".d2");
+const hotspots = document.querySelector(".hotspots");
+const controlBtn = document.querySelector(".control-btn");
+const switchButton = document.getElementById("toggle-switch_body");
+const toggleTxt = document.getElementById("toggle-txt");
+const toggleSwitchTrigger = document.getElementById("toggle-switch_trigger");
 
-// menu button
-controlBtn.addEventListener("click", function () {
-  if (list.classList.contains("active")) {
-    console.log("first");
-    list.classList.replace("active", "hide");
-    list.setAttribute("style", "display:none");
+// adjust height of hotspots height
+const d3Height = d3.clientHeight;
+hotspots.style.height = d3Height + "px";
+
+// toggle the 2d ,3d maps
+switchButton.addEventListener("click", () => {
+  console.log("done");
+  if (d2.classList.contains("active")) {
+    d2.classList.toggle("active");
+    d3.classList.toggle("active");
+    toggleTxt.innerText = "3D";
+
+    toggleSwitchTrigger.style.left = "59%";
   } else {
-    list.classList.replace("hide", "active");
-    list.setAttribute("style", "display:block");
+    d2.classList.toggle("active");
+    d3.classList.toggle("active");
+    toggleTxt.innerText = "2D";
+    toggleSwitchTrigger.style.left = "9%";
   }
 });
 
-// landmark button
-markBtn.addEventListener("click", function () {
-  const marks = document.querySelectorAll(".location-marks");
-  [...marks].map((mark) => {
-    if (mark.classList.contains("active")) {
-      mark.classList.remove("active");
-      mark.setAttribute("style", "display:none");
-    } else {
-      mark.classList.add("active");
-      mark.setAttribute("style", "display:block");
-    }
+// highlight maps area and make them responsive
+$(".map").maphilight();
+$("img[usemap]").rwdImageMaps();
+
+// add mouse events to map areas
+
+//d2 cabans
+$("#d2-cabans")
+  .mouseover(function () {
+    console.log("1111");
+    $(".para-1").toggleClass("active");
+  })
+  .mouseout(function () {
+    $(".para-1").toggleClass("active");
   });
-});
 
-// roads button
-roadBtn.addEventListener("click", function () {
-  const roads = document.querySelector("#main-road");
+// d2 the mid
+$("#d2-the-mid")
+  .mouseover(function () {
+    console.log("2222");
+    $(".para-2").toggleClass("active");
+  })
+  .mouseout(function () {
+    $(".para-2").toggleClass("active");
+  });
 
-  if (roads.classList.contains("d-none")) {
-    roads.classList.remove("d-none");
-    // roads.setAttribute("style", "display:none");
-  } else {
-    roads.classList.add("d-none");
-    // roads.setAttribute("style", "display:block");
-  }
-});
+// d2 waterfall
+$("#d2-water-fall")
+  .mouseover(function () {
+    console.log("3333");
+    $(".para-3").toggleClass("active");
+  })
+  .mouseout(function () {
+    $(".para-3").toggleClass("active");
+  });
 
-// mosque button
-mosBtn.addEventListener("click", function () {
-  const mosque = document.querySelector("#mosque");
+// d3 cabans
+$("#d3-cabans")
+  .mouseover(function () {
+    console.log("4444");
+    $(".para-1").toggleClass("active");
+  })
+  .mouseout(function () {
+    $(".para-1").toggleClass("active");
+  });
 
-  if (mosque.classList.contains("d-none")) {
-    mosque.classList.remove("d-none");
-    // mosque.setAttribute("style", "display:none");
-  } else {
-    mosque.classList.add("d-none");
-    // mosque.setAttribute("style", "display:block");
-  }
-});
+//d3 the mid
+$("#d3-the-mid")
+  .mouseover(function () {
+    console.log("5555");
+    $(".para-2").toggleClass("active");
+  })
+  .mouseout(function () {
+    $(".para-2").toggleClass("active");
+  });
 
-matroh.addEventListener("click", function () {
-  const path = document.querySelector("#matroh-path");
-  const dets = document.querySelector("#matroh-dets");
+// add events to para elements
 
-  if (path.classList.contains("d-none")) {
-    path.classList.remove("d-none");
-    dets.classList.remove("d-none");
-    // path.setAttribute("style", "display:none");
-  } else {
-    path.classList.add("d-none");
-    dets.classList.add("d-none");
-    // mosque.setAttribute("style", "display:block");
-  }
-});
+// para-1
+$(".para-1")
+  .mouseover(function (e) {
+    $("#d2-cabans").mouseover();
+    // $("#d3-cabans").mouseover();
+  })
+  .mouseout(function (e) {
+    // $("#d3-cabans").mouseout();
+    $("#d2-cabans").mouseout();
+  })
+  .click(function (e) {
+    e.preventDefault();
+  });
 
-airport.addEventListener("click", function () {
-  const path = document.querySelector("#airport-path");
-  const dets = document.querySelector("#airport-dets");
+// para-2
+$(".para-2")
+  .mouseover(function (e) {
+    $("#d3-the-mid").mouseover();
+    $("#d2-the-mid").mouseover();
+  })
+  .mouseout(function (e) {
+    $("#d2-the-mid").mouseout();
+    $("#d3-the-mid").mouseout();
+  })
+  .click(function (e) {
+    e.preventDefault();
+  });
 
-  if (path.classList.contains("d-none")) {
-    path.classList.remove("d-none");
-    dets.classList.remove("d-none");
-    // path.setAttribute("style", "display:none");
-  } else {
-    path.classList.add("d-none");
-    dets.classList.add("d-none");
-    // mosque.setAttribute("style", "display:block");
-  }
-});
+// para-3
+$(".para-3")
+  .mouseover(function (e) {
+    $("#d2-water-fall").mouseover();
+  })
+  .mouseout(function (e) {
+    $("#d2-water-fall").mouseout();
+  })
+  .click(function (e) {
+    e.preventDefault();
+  });
+// menu button
+// controlBtn.addEventListener("click", function () {
+//   if (list.classList.contains("active")) {
+//     console.log("first");
+//     list.classList.replace("active", "hide");
+//     list.setAttribute("style", "display:none");
+//   } else {
+//     list.classList.replace("hide", "active");
+//     list.setAttribute("style", "display:block");
+//   }
+// });
+
+// // landmark button
+// markBtn.addEventListener("click", function () {
+//   const marks = document.querySelectorAll(".location-marks");
+//   [...marks].map((mark) => {
+//     if (mark.classList.contains("active")) {
+//       mark.classList.remove("active");
+//       mark.setAttribute("style", "display:none");
+//     } else {
+//       mark.classList.add("active");
+//       mark.setAttribute("style", "display:block");
+//     }
+//   });
+// });
+
+// // roads button
+// roadBtn.addEventListener("click", function () {
+//   const roads = document.querySelector("#main-road");
+
+//   if (roads.classList.contains("d-none")) {
+//     roads.classList.remove("d-none");
+//     // roads.setAttribute("style", "display:none");
+//   } else {
+//     roads.classList.add("d-none");
+//     // roads.setAttribute("style", "display:block");
+//   }
+// });
+
+// // mosque button
+// mosBtn.addEventListener("click", function () {
+//   const mosque = document.querySelector("#mosque");
+
+//   if (mosque.classList.contains("d-none")) {
+//     mosque.classList.remove("d-none");
+//     // mosque.setAttribute("style", "display:none");
+//   } else {
+//     mosque.classList.add("d-none");
+//     // mosque.setAttribute("style", "display:block");
+//   }
+// });
+
+// matroh.addEventListener("click", function () {
+//   const path = document.querySelector("#matroh-path");
+//   const dets = document.querySelector("#matroh-dets");
+
+//   if (path.classList.contains("d-none")) {
+//     path.classList.remove("d-none");
+//     dets.classList.remove("d-none");
+//     // path.setAttribute("style", "display:none");
+//   } else {
+//     path.classList.add("d-none");
+//     dets.classList.add("d-none");
+//     // mosque.setAttribute("style", "display:block");
+//   }
+// });
+
+// airport.addEventListener("click", function () {
+//   const path = document.querySelector("#airport-path");
+//   const dets = document.querySelector("#airport-dets");
+
+//   if (path.classList.contains("d-none")) {
+//     path.classList.remove("d-none");
+//     dets.classList.remove("d-none");
+//     // path.setAttribute("style", "display:none");
+//   } else {
+//     path.classList.add("d-none");
+//     dets.classList.add("d-none");
+//     // mosque.setAttribute("style", "display:block");
+//   }
+// });
 // fetch google sheet
 const sheetId = "1dEy8bMqOo1cFngZpmf2hWQZpZedDITPXoGnAoTbxb2g";
 const sheetTitle = "state";
