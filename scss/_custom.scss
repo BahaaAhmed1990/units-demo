@@ -1,9 +1,14 @@
 // import bootstrap file
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-
+// import components
+@import "./components/toggle-btn";
 //import sections
 @import "./sections/header";
 @import "./sections/unit-types";
 @import "./sections/customize-unit";
 @import "./sections/virtual-tour";
 @import "./sections/unit";
+@import "./sections/water-fall";
+@import "./sections/cabans";
+@import "./sections/lagoones";
+@import "./sections/mid";

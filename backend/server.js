@@ -31,6 +31,18 @@ app.get("/customize-unit", (req, res) => {
 app.get("/virtual-tour", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../", "frontend", "virtual-tour.html"));
 });
+app.get("/virtual-tour/water-fall", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../", "frontend", "water-fall.html"));
+});
+app.get("/virtual-tour/mid", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../", "frontend", "mid.html"));
+});
+app.get("/virtual-tour/lagonnes", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../", "frontend", "lagonnes.html"));
+});
+app.get("/virtual-tour/cabans", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../", "frontend", "cabans.html"));
+});
 app.get("/unit-types", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../", "frontend", "unit-types.html"));
 });

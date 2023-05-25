@@ -1,0 +1,71 @@
+#lagoones {
+  margin-top: 20px;
+  padding-bottom: 200px;
+  img {
+    max-width: initial;
+  }
+
+  .wrapper-2d,
+  .wrapper-3d {
+    z-index: 1;
+  }
+
+  .wrapper-2d.active,
+  .wrapper-3d.active {
+    z-index: 2;
+  }
+
+  .my-label {
+    font-size: 8px;
+    display: block;
+    width: 20px;
+    height: 15px;
+    transform: rotate(-48deg);
+    font-weight: normal;
+    cursor: pointer;
+    text-align: center;
+    color: #9f6b28;
+    border: 1px solid #9f6b28;
+    background: rgba(228, 232, 21, 0.9);
+    visibility: hidden;
+  }
+  #A-SA-101 {
+    bottom: 85px;
+    left: 479px;
+  }
+  #A-SA-102 {
+    bottom: 106px;
+    left: 468px;
+  }
+  #A-SA-103 {
+    bottom: 118px;
+    left: 451px;
+  }
+  #A-SA-104 {
+    bottom: 135px;
+    left: 431px;
+  }
+  #A-SA-105 {
+    bottom: 140px;
+    left: 413px;
+  }
+  #A-SA-106 {
+    bottom: 154px;
+    left: 399px;
+  }
+  #A-SA-107 {
+    bottom: 164px;
+    left: 385px;
+  }
+  #A-SA-108 {
+    bottom: 169px;
+    left: 371px;
+  }
+  #A-SA-109 {
+    bottom: 177px;
+    left: 357px;
+  }
+  #table {
+    font-size: 14px;
+  }
+}

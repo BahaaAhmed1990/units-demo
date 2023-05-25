@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>cabans</title>
+  </head>
+  <body>
+    <!-- header section -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="/"
+            ><img src="/assets/images/logo.png" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/virtual-tour">Virtual Tour</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/unit-types">Unit Types</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/customize-unit">Customize Unit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/book-now">Book Now</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- cabans zone -->
+    <section id="cabans">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-8">
+            <div class="position-relative">
+              <!-- toggle button -->
+              <div class="control-btn position-absolute">
+                <div class="toggle-button">
+                  <div>
+                    <span id="toggle-txt">2D</span>
+                  </div>
+                  <div class="toggle-switch" id="toggle-switch_body">
+                    <div id="toggle-switch_trigger"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2d -->
+              <div class="wrapper-2d position-absolute active">
+                <img
+                  width="852"
+                  height="480"
+                  src="/assets/images/2D/2D_CABANAS.jpg"
+                  alt="2DWATERFALL"
+                />
+                <span class="position-absolute my-label" id="A-SA-101">1 </span>
+                <span class="position-absolute my-label" id="A-SA-102">2</span>
+                <span class="position-absolute my-label" id="A-SA-103">3</span>
+                <span class="position-absolute my-label" id="A-SA-104">4</span>
+                <span class="position-absolute my-label" id="A-SA-105">5</span>
+                <span class="position-absolute my-label" id="A-SA-106">6</span>
+                <span class="position-absolute my-label" id="A-SA-107">7</span>
+                <span class="position-absolute my-label" id="A-SA-108">8</span>
+                <span class="position-absolute my-label" id="A-SA-109">9</span>
+              </div>
+
+              <!-- 3d -->
+              <div class="wrapper-3d position-absolute">
+                <img
+                  width="852"
+                  height="480"
+                  src="/assets/images/2D/2D_CABANAS.jpg"
+                  alt="3DWATERFALL"
+                />
+                <span class="position-absolute my-label" id="A-SA-101">1 </span>
+                <span class="position-absolute my-label" id="A-SA-102">2</span>
+                <span class="position-absolute my-label" id="A-SA-103">3</span>
+                <span class="position-absolute my-label" id="A-SA-104">4</span>
+                <span class="position-absolute my-label" id="A-SA-105">5</span>
+                <span class="position-absolute my-label" id="A-SA-106">6</span>
+                <span class="position-absolute my-label" id="A-SA-107">7</span>
+                <span class="position-absolute my-label" id="A-SA-108">8</span>
+                <span class="position-absolute my-label" id="A-SA-109">9</span>
+              </div>
+            </div>
+          </div>
+          <!-- table -->
+          <div class="col-4" id="table">
+            <form class="mb-1">
+              <div>
+                <label for="room-range" class="form-label">Room</label>
+                <input
+                  type="range"
+                  class="form-range"
+                  min="0"
+                  max="6"
+                  step="1"
+                  id="room-range"
+                  value="0"
+                />
+              </div>
+
+              <div>
+                <select
+                  id="type-range"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option value="all" selected>all</option>
+                  <option value="6RB">6 bedroom</option>
+                  <option value="5RB">5 bedroom</option>
+                </select>
+              </div>
+
+              <button id="clear-btn">clear all filters</button>
+            </form>
+            <table class="table">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">unit code</th>
+                  <th scope="col">room</th>
+                  <th scope="col">type name</th>
+                  <th scope="col">sellabel area</th>
+                </tr>
+              </thead>
+              <tbody id="tabel-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/cabans.js"></script>
+  </body>
+</html>

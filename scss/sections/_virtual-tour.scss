@@ -91,53 +91,9 @@
 }
 
 #zones {
-  margin-top: 30px;
+  margin-top: 5px;
 
   .hotspots {
-    position: relative;
-
-    .control-btn {
-      z-index: 4;
-      top: 90%;
-      left: 5%;
-      width: 400px;
-
-      .toggle-button {
-        display: flex;
-        align-items: center;
-      }
-      .toggle-button div:first-child {
-        text-align: end;
-        padding-right: 10px;
-      }
-      .toggle-switch {
-        background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-        transition: all 0.3s linear;
-      }
-      .toggle-switch:hover {
-        cursor: pointer;
-        box-shadow: 0 0 5px black;
-      }
-      #toggle-switch_body {
-        width: 9.5%;
-        border-radius: 1000px;
-        position: relative;
-        top: 2px;
-        height: 18px;
-      }
-      #toggle-switch_trigger {
-        position: absolute;
-        width: 30%;
-        height: 68%;
-        top: 51%;
-        left: 9%;
-        transform: translateY(-50%);
-        background-color: hsl(230, 17%, 14%);
-        border-radius: 50%;
-        transition: all 0.3s ease-in;
-      }
-    }
-
     .d3,
     .d2 {
       z-index: 1;
@@ -145,9 +101,6 @@
     .d3.active,
     .d2.active {
       z-index: 2;
-    }
-    img {
-      // max-width: 100%;
     }
   }
   .para {
@@ -192,94 +145,6 @@
   }
   .para-4::before {
     background-color: yellow;
-  }
-}
-
-#cabans {
-  margin-top: 20px;
-  padding-bottom: 200px;
-  img {
-    max-width: initial;
-  }
-
-  .wrapper-1 {
-    z-index: 3;
-  }
-
-  .wrapper-2 {
-    z-index: 2;
-  }
-
-  #vid-1 {
-    z-index: 2;
-  }
-
-  #btn-1,
-  #btn-2 {
-    z-index: 5;
-    padding: 12px 16px;
-  }
-
-  #btn-1 {
-    bottom: -280px;
-    right: 45px;
-  }
-  #btn-2 {
-    bottom: -280px;
-    left: 20px;
-  }
-  .my-label {
-    font-size: 8px;
-    display: block;
-    width: 20px;
-    height: 15px;
-    transform: rotate(-48deg);
-    font-weight: normal;
-    cursor: pointer;
-    text-align: center;
-    color: #9f6b28;
-    border: 1px solid #9f6b28;
-    background: rgba(228, 232, 21, 0.9);
-    visibility: hidden;
-  }
-  #A-SA-101 {
-    bottom: 85px;
-    left: 479px;
-  }
-  #A-SA-102 {
-    bottom: 106px;
-    left: 468px;
-  }
-  #A-SA-103 {
-    bottom: 118px;
-    left: 451px;
-  }
-  #A-SA-104 {
-    bottom: 135px;
-    left: 431px;
-  }
-  #A-SA-105 {
-    bottom: 140px;
-    left: 413px;
-  }
-  #A-SA-106 {
-    bottom: 154px;
-    left: 399px;
-  }
-  #A-SA-107 {
-    bottom: 164px;
-    left: 385px;
-  }
-  #A-SA-108 {
-    bottom: 169px;
-    left: 371px;
-  }
-  #A-SA-109 {
-    bottom: 177px;
-    left: 357px;
-  }
-  #table {
-    font-size: 14px;
   }
 }
 
