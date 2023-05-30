@@ -22,10 +22,10 @@ switchButton.addEventListener("click", () => {
     toggleSwitchTrigger.style.left = "9%";
   }
 });
-// fetch google sheet
+// fetch cabanas google sheet
 const sheetId = "1dEy8bMqOo1cFngZpmf2hWQZpZedDITPXoGnAoTbxb2g";
-const sheetTitle = "state";
-const sheetRange = "A2:F10";
+const sheetTitle = "cabanas";
+const sheetRange = "A2:J107";
 let fullUrl =
   "https://docs.google.com/spreadsheets/d/" +
   sheetId +

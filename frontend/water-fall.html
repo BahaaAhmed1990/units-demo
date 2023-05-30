@@ -51,98 +51,237 @@
 
     <!-- water-fall zone -->
     <section id="water-fall">
-      <div class="container-fluid">
+      <div class="container">
+        <!-- toggle button -->
+        <div class="control-btn">
+          <div class="toggle-button">
+            <div>
+              <span id="toggle-txt">2D</span>
+            </div>
+            <div class="toggle-switch" id="toggle-switch_body">
+              <div id="toggle-switch_trigger"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container main">
         <div class="row">
-          <div class="col-8">
-            <div class="position-relative">
-              <!-- toggle button -->
-              <div class="control-btn position-absolute">
-                <div class="toggle-button">
-                  <div>
-                    <span id="toggle-txt">2D</span>
+          <div class="col-sm-12 col-md-7">
+            <div class="">
+              <!-- 2d -->
+              <div class="wrapper-2d active">
+                <div class="image-container">
+                  <img src="/assets/images/2D/test_waterfall.jpg" alt="Image" />
+                  <!-- fullscreen button -->
+                  <!-- <button id="fullscreenBtn">
+                    <svg
+                      fill="#000000"
+                      height="24px"
+                      width="24px"
+                      version="1.1"
+                      id="fullscreen"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 384.97 384.97"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g id="Fullscreen_1_">
+                          <path
+                            d="M372.939,216.545c-6.123,0-12.03,5.269-12.03,12.03v132.333H24.061V24.061h132.333c6.388,0,12.03-5.642,12.03-12.03
+              S162.409,0,156.394,0H24.061C10.767,0,0,10.767,0,24.061v336.848c0,13.293,10.767,24.061,24.061,24.061h336.848
+              c13.293,0,24.061-10.767,24.061-24.061V228.395C384.97,221.731,380.085,216.545,372.939,216.545z"
+                          />
+                          <path
+                            d="M372.939,0H252.636c-6.641,0-12.03,5.39-12.03,12.03s5.39,12.03,12.03,12.03h91.382L99.635,268.432
+              c-4.668,4.668-4.668,12.235,0,16.903c4.668,4.668,12.235,4.668,16.891,0L360.909,40.951v91.382c0,6.641,5.39,12.03,12.03,12.03
+              s12.03-5.39,12.03-12.03V12.03l0,0C384.97,5.558,379.412,0,372.939,0z"
+                          />
+                        </g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                      </g>
+                    </svg>
+                    <svg
+                      height="24px"
+                      width="24px"
+                      version="1.1"
+                      id="exit-fullscreen"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 32 32"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g id="fullscreen_x5F_exit">
+                          <g>
+                            <polygon
+                              style="fill: #030104"
+                              points="24.586,27.414 29.172,32 32,29.172 27.414,24.586 32,20 20,20 20,32 			"
+                            />
+                            <polygon
+                              style="fill: #030104"
+                              points="0,12 12,12 12,0 7.414,4.586 2.875,0.043 0.047,2.871 4.586,7.414 			"
+                            />
+                            <polygon
+                              style="fill: #030104"
+                              points="0,29.172 2.828,32 7.414,27.414 12,32 12,20 0,20 4.586,24.586 			"
+                            />
+                            <polygon
+                              style="fill: #030104"
+                              points="20,12 32,12 27.414,7.414 31.961,2.871 29.133,0.043 24.586,4.586 20,0 			"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </button> -->
+                  <!-- pop up box -->
+                  <div class="pop-up">
+                    <h5 class="pop-up-heading">
+                      <span></span>
+                      <button class="close-pop-up">X</button>
+                    </h5>
+                    <p class="pop-up-rooms">Rooms :<span></span></p>
+                    <p class="pop-up-area">Area :<span></span></p>
+                    <button class="pop-up-button">more info</button>
+                    <div class="triangle"></div>
                   </div>
-                  <div class="toggle-switch" id="toggle-switch_body">
-                    <div id="toggle-switch_trigger"></div>
-                  </div>
+                  <span class="d2-label" id="d2-B-SD-115"></span>
+                  <span class="d2-label" id="d2-B-SD-116"></span>
+                  <span class="d2-label" id="d2-B-SD-117"></span
+                  ><span class="d2-label" id="d2-B-SD-118"></span
+                  ><span class="d2-label" id="d2-B-SD-119"></span
+                  ><span class="d2-label" id="d2-B-SD-120"></span>
                 </div>
               </div>
 
-              <!-- 2d -->
-              <div class="wrapper-2d position-absolute active">
-                <img
-                  width="852"
-                  height="480"
-                  src="/assets/images/2D/2DWATERFALL0.jpg"
-                  alt="2DWATERFALL"
-                />
-                <span class="position-absolute my-label" id="A-SA-101">1 </span>
-                <span class="position-absolute my-label" id="A-SA-102">2</span>
-                <span class="position-absolute my-label" id="A-SA-103">3</span>
-                <span class="position-absolute my-label" id="A-SA-104">4</span>
-                <span class="position-absolute my-label" id="A-SA-105">5</span>
-                <span class="position-absolute my-label" id="A-SA-106">6</span>
-                <span class="position-absolute my-label" id="A-SA-107">7</span>
-                <span class="position-absolute my-label" id="A-SA-108">8</span>
-                <span class="position-absolute my-label" id="A-SA-109">9</span>
-              </div>
-
               <!-- 3d -->
-              <div class="wrapper-3d position-absolute">
-                <img
-                  width="852"
-                  height="480"
-                  src="/assets/images/2D/3D_WATERFALL.jpg"
-                  alt="3DWATERFALL"
-                />
-                <span class="position-absolute my-label" id="A-SA-101">1 </span>
-                <span class="position-absolute my-label" id="A-SA-102">2</span>
-                <span class="position-absolute my-label" id="A-SA-103">3</span>
-                <span class="position-absolute my-label" id="A-SA-104">4</span>
-                <span class="position-absolute my-label" id="A-SA-105">5</span>
-                <span class="position-absolute my-label" id="A-SA-106">6</span>
-                <span class="position-absolute my-label" id="A-SA-107">7</span>
-                <span class="position-absolute my-label" id="A-SA-108">8</span>
-                <span class="position-absolute my-label" id="A-SA-109">9</span>
+              <div class="wrapper-3d">
+                <div class="image-container">
+                  <img src="/assets/images/2D/3D_WATERFALL.jfif" alt="Image" />
+                  <span class="d3-label label-1" id="d3-B-SD-116"
+                    >B-SD-116</span
+                  >
+                  <span class="d3-label label-2" id="d3-B-SD-117"
+                    >B-SD-117</span
+                  >
+                </div>
               </div>
             </div>
           </div>
+          <div class="col-md-1"></div>
           <!-- table -->
-          <div class="col-4" id="table">
-            <form class="mb-1">
-              <div>
-                <label for="room-range" class="form-label">Room</label>
-                <input
-                  type="range"
-                  class="form-range"
-                  min="0"
-                  max="6"
-                  step="1"
-                  id="room-range"
-                  value="0"
-                />
-              </div>
+          <div class="col-sm-12 col-md-4" id="table">
+            <!-- form -->
+            <form>
+              <label for="area-min">Area Min:</label>
+              <input
+                type="number"
+                id="area-min"
+                name="area-min"
+                min="120"
+                max="220"
+                step="50"
+                value="120"
+              />
 
-              <div>
-                <select
-                  id="type-range"
-                  class="form-select"
-                  aria-label="Default select example"
-                >
-                  <option value="all" selected>all</option>
-                  <option value="6RB">6 bedroom</option>
-                  <option value="5RB">5 bedroom</option>
-                </select>
-              </div>
+              <label for="area-max">Area Max:</label>
+              <input
+                type="number"
+                id="area-max"
+                name="area-max"
+                min="230"
+                max="330"
+                step="50"
+                value="330"
+              />
 
-              <button id="clear-btn">clear all filters</button>
+              <label for="price-min">Price Min:</label>
+              <input
+                type="number"
+                id="price-min"
+                name="price-min"
+                min="5"
+                max="10"
+                step="5"
+                value="5"
+              />
+
+              <label for="price-max">Price Max:</label>
+              <input
+                type="number"
+                id="price-max"
+                name="price-max"
+                min="15"
+                max="20"
+                step="5"
+                value="20"
+              />
+
+              <label for="rooms-min">Rooms Min:</label>
+              <input
+                type="number"
+                id="rooms-min"
+                name="rooms-min"
+                min="2"
+                max="3"
+                step="1"
+                value="2"
+              />
+
+              <label for="rooms-max">Rooms Max:</label>
+              <input
+                type="number"
+                id="rooms-max"
+                name="rooms-max"
+                min="4"
+                max="5"
+                step="1"
+                value="5"
+              />
+
+              <label for="types">Types:</label>
+              <select id="types" name="types">
+                <!-- <option value="all">All</option> -->
+                <option value="all">All</option>
+                <option value="Penthouse Chalet">Penthouse Chalet</option>
+                <option value="Stand alone Villa Extra Room">
+                  Stand alone Villa Extra Room
+                </option>
+                <option value="Stand alone Villa">Stand alone Villa</option>
+                <option value="Town House">Town House</option>
+                <option value="Town House Corner">Town House Corner</option>
+                <option value="Senior Chalet">Senior Chalet</option>
+                <option value="Chalet">Chalet</option>
+                <option value="Garden Senior Chalet">
+                  Garden Senior Chalet
+                </option>
+              </select>
+
+              <label for="status">Status:</label>
+              <select id="status" name="status">
+                <option value="all">All</option>
+                <option value="available">available</option>
+                <option value="not available">not available</option>
+                <option value="reserved">reserved</option>
+                <option value="Blocked">Blocked</option>
+                <option value="all">All</option>
+              </select>
             </form>
+            <!-- table -->
             <table class="table">
               <thead class="table-dark">
                 <tr>
-                  <th scope="col">unit code</th>
-                  <th scope="col">room</th>
-                  <th scope="col">type name</th>
-                  <th scope="col">sellabel area</th>
+                  <th scope="col">Unit Code</th>
+                  <th scope="col">Size</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Rooms</th>
+                  <th scope="col">type</th>
                 </tr>
               </thead>
               <tbody id="tabel-body"></tbody>

@@ -22,10 +22,10 @@ switchButton.addEventListener("click", () => {
     toggleSwitchTrigger.style.left = "9%";
   }
 });
-// fetch google sheet
+// fetch meditarrian  google sheet
 const sheetId = "1dEy8bMqOo1cFngZpmf2hWQZpZedDITPXoGnAoTbxb2g";
-const sheetTitle = "state";
-const sheetRange = "A2:F10";
+const sheetTitle = "meditarrian";
+const sheetRange = "A2:L68";
 let fullUrl =
   "https://docs.google.com/spreadsheets/d/" +
   sheetId +
