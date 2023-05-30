@@ -105,8 +105,53 @@ const data = fetch(fullUrl)
       console.log(filters);
       // check all types
 
+      // types all and status all
+      if (filters.types === "all" && filters.status === "all") {
+        const filteredData = rows.filter((row) => {
+          // Check if the area matches the filter
+          if (
+            filters.area &&
+            (row.c[9].v < filters.area.min || row.c[9].v > filters.area.max)
+          ) {
+            return false;
+          }
+
+          // // Check if the price is within the filter range
+          if (
+            filters.price &&
+            (row.c[12].v < filters.price.min || row.c[12].v > filters.price.max)
+          ) {
+            return false;
+          }
+          // // Check if the room number matches the filter
+          if (
+            filters.rooms &&
+            (row.c[5].v + row.c[6].v < filters.rooms.min ||
+              row.c[5].v + row.c[6].v > filters.rooms.max)
+          ) {
+            return false;
+          }
+
+          // // // Check if the type matches the filter
+          // if (filters.types && row.c[13].v !== filters.types) {
+          //   return false;
+          // }
+
+          // Check if the status matches the filter
+          // if (filters.status && row.c[0].v !== filters.status) {
+          //   return false;
+          // }
+
+          // If all filters pass, include the row in the filtered data
+          return true;
+        });
+        // Update the table to display the filtered data
+        console.log(filteredData);
+        createTable(filteredData);
+      }
+
       // types all
-      if (filters.types === "all") {
+      else if (filters.types === "all") {
         const filteredData = rows.filter((row) => {
           // Check if the area matches the filter
           if (
