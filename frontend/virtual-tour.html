@@ -241,8 +241,9 @@
 
     <!-- project zones -->
     <section id="zones">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row position-relative hotspots">
+          <!-- control button  -->
           <div class="control-btn position-absolute">
             <div class="toggle-button">
               <div>
@@ -253,79 +254,46 @@
               </div>
             </div>
           </div>
+          <!-- 3d photo -->
           <div class="d3 position-absolute">
-            <img
-              src="./assets/images/3D_VIRTUAL.jpg"
-              usemap="#image-map1"
-              class="map img-fluid"
-            />
-
-            <map name="image-map1">
-              <area
-                target=""
-                alt=""
-                title="cabans"
-                href=""
-                coords="212,175,719,83,736,77,744,69,746,59,742,44,722,23,693,2,532,2,188,36"
-                shape="poly"
-                id="d3-cabans"
-              /><area
-                target=""
-                alt="the mid"
-                title="the mid"
-                href=""
-                coords="221,188,723,105,746,107,766,119,773,136,783,148,798,157,816,170,841,175,829,192,835,208,852,218,868,232,874,247,859,267,869,302,886,313,917,321,956,383,949,437,253,478"
-                shape="poly"
-                id="d3-the-mid"
+            <div class="img-container position-relative">
+              <img
+                src="./assets/images/3D_VIRTUAL.jpg"
+                usemap="#image-map1"
+                class="map img-fluid"
               />
-            </map>
-          </div>
-          <div class="d2 position-absolute active">
-            <img
-              src="./assets/images/2d virtualtour.jpg"
-              usemap="#image-map"
-              class="map img-fluid"
-            />
-
-            <map name="image-map">
-              <area
-                target=""
-                alt=""
-                title="water fall"
+              <a class="para-1 position-absolute" href="/virtual-tour/cabans"
+                >Cabanas</a
+              >
+              <a class="para-2 position-absolute" href="/virtual-tour/mid"
+                >The Mediterranen</a
+              >
+              <a
+                class="para-3 position-absolute"
                 href="/virtual-tour/water-fall"
-                coords="603,462,582,231,588,221,591,202,623,209,636,207,648,214,658,207,666,211,676,205,690,197,701,192,718,202,730,202,739,212,739,226,758,218,791,215,855,231,861,241,856,420"
-                shape="poly"
-                id="d2-water-fall"
-              />
-              <area
-                target=""
-                alt="the mid"
-                title="the mid"
-                href="/virtual-tour/mid"
-                coords="362,213,513,188,531,196,546,209,550,232,581,457,387,485"
-                shape="poly"
-                id="d2-the-mid"
-              />
-              <area
-                target=""
-                alt="cabans"
-                title="cabans"
-                href="/virtual-tour/cabans"
-                coords="230,487,198,223,347,209,378,492"
-                shape="poly"
-                id="d2-cabans"
-              />
-            </map>
+                >The Waterfall</a
+              >
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row text-center">
-          <div class="col">
-            <div class="para d-flex">
-              <p class="para-1 position-relative">Cabanas</p>
-              <p class="para-2 position-relative">TheMediterranen</p>
-              <p class="para-3 position-relative">TheWaterfall</p>
+          <!-- 2d photo -->
+          <div class="d2 position-absolute active">
+            <div class="img-container">
+              <img
+                src="./assets/images/2d virtualtour.jpg"
+                usemap="#image-map"
+                class="map img-fluid"
+              />
+              <a class="para-1 position-absolute" href="/virtual-tour/cabans"
+                >Cabanas</a
+              >
+              <a class="para-2 position-absolute" href="/virtual-tour/mid"
+                >The Mediterranen</a
+              >
+              <a
+                class="para-3 position-absolute"
+                href="/virtual-tour/water-fall"
+                >The Waterfall</a
+              >
             </div>
           </div>
         </div>
@@ -397,8 +365,6 @@
       type="text/javascript"
       src="https://code.jquery.com/jquery-3.3.1.min.js"
     ></script>
-    <script src="./assets/js/jquery.maphighlight.js"></script>
-    <script src="./assets/js/jquery-rwdImageMaps.js"></script>
     <script src="./assets/js/virtual-tour.js" defer></script>
   </body>
 </html>
