@@ -263,6 +263,7 @@
       overflow-y: scroll;
     }
     .units-rows.active,
+    .units-rows.clicked,
     .units-rows:hover {
       background-color: #ccc;
     }

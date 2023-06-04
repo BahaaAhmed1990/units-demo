@@ -12095,6 +12095,7 @@ header #navbarNav .nav-item .nav-link.active {
   overflow-y: scroll;
 }
 #water-fall #table .units-rows.active,
+#water-fall #table .units-rows.clicked,
 #water-fall #table .units-rows:hover {
   background-color: #ccc;
 }

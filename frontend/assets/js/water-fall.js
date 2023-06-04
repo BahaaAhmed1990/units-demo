@@ -349,6 +349,7 @@ function createTable(rows) {
       row.addEventListener("click", function () {
         let rowId = this.id.slice(2);
         console.log(rowId);
+        document.querySelector(`#r-${rowId}`).classList.add("clicked");
         const label = document.querySelector(`#d2-${rowId}`);
         const labelPosition = label.getBoundingClientRect();
         const imagePosition = label.parentElement.getBoundingClientRect();
@@ -376,6 +377,13 @@ function createTable(rows) {
         ).innerText = `ID :${unitId}`;
         popUp.querySelector(".pop-up-rooms span").innerText = unitRoom;
         popUp.querySelector(".pop-up-area span").innerText = unitArea;
+        document
+          .querySelector(".close-pop-up")
+          .addEventListener("click", function () {
+            console.log("close");
+            popUp.style.display = "none";
+            document.querySelector(`#r-${rowId}`).classList.remove("clicked");
+          });
       });
     });
   });
@@ -392,7 +400,7 @@ function createLabels(rows) {
     spanElem.classList.add("d2-label");
     spanElem.setAttribute("id", `d2-${row.c[3].v}`);
     spanElem.addEventListener("mouseover", function () {
-      console.log(this);
+      // console.log(this);
       this.classList.add("anime");
       document.querySelector(`#r-${row.c[3].v}`).classList.add("active");
     });
@@ -402,6 +410,8 @@ function createLabels(rows) {
       document.querySelector(`#r-${row.c[3].v}`).classList.remove("active");
     });
     spanElem.addEventListener("click", function () {
+      document.querySelector(`#r-${row.c[3].v}`).classList.add("clicked");
+      // console.log(tableRow);
       const label = document.querySelector(`#d2-${row.c[3].v}`);
       const labelPosition = label.getBoundingClientRect();
       const imagePosition = label.parentElement.getBoundingClientRect();
@@ -409,7 +419,7 @@ function createLabels(rows) {
         ((labelPosition.top - imagePosition.top) / imagePosition.height) * 100;
       const labelLeft =
         ((labelPosition.left - imagePosition.left) / imagePosition.width) * 100;
-      console.log(labelTop, labelLeft);
+      // console.log(labelTop, labelLeft);
       // get the data from row element
       const unitId = document.querySelector(
         `#r-${row.c[3].v} .unit-id`
@@ -429,12 +439,23 @@ function createLabels(rows) {
       ).innerText = `ID :${unitId}`;
       popUp.querySelector(".pop-up-rooms span").innerText = unitRoom;
       popUp.querySelector(".pop-up-area span").innerText = unitArea;
+      // close the pop up
+      document
+        .querySelector(".close-pop-up")
+        .addEventListener("click", function () {
+          console.log("close");
+          popUp.style.display = "none";
+          document
+            .querySelector(`#r-${row.c[3].v}`)
+            .classList.remove("clicked");
+        });
     });
     document.querySelector("#d2-img-container").append(spanElem);
   });
 }
 // close the pop up
-document.querySelector(".close-pop-up").addEventListener("click", function () {
-  console.log("close");
-  popUp.style.display = "none";
-});
+// document.querySelector(".close-pop-up").addEventListener("click", function () {
+//   console.log("close");
+//   popUp.style.display = "none";
+//   document.querySelector(`#r-${row.c[3].v}`).classList.remove("clicked");
+// });
