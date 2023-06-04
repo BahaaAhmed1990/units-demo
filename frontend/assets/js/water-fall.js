@@ -13,7 +13,7 @@ const priceMinInput = document.getElementById("price-min");
 const priceMaxInput = document.getElementById("price-max");
 const roomsMinSelect = document.getElementById("rooms-min");
 const roomsMaxSelect = document.getElementById("rooms-max");
-const typesSelect = document.getElementById("types");
+const typesSelect = document.getElementById("form-types");
 const statusSelect = document.getElementById("status");
 // full screen mode
 const fullScreenContent = document.querySelector(".main");
@@ -51,20 +51,12 @@ let fullUrl =
 
 const data = fetch(fullUrl)
   .then((res) => res.text())
-  // modify spans
+  // return row data
   .then((rep) => {
     let data = JSON.parse(rep.substr(47).slice(0, -2));
     let rows = data.table.rows;
 
     // console.log(rows);
-
-    rows.map((row) => {
-      if (row.c[0].v === "available") {
-        // let unitId = `#${row.c[1].v}`;
-        // document.querySelector(unitId).style.visibility = "visible";
-        // console.log(row.c);
-      }
-    });
     return rows;
   })
   // create table and filter it using the form
@@ -74,13 +66,31 @@ const data = fetch(fullUrl)
     createTable(rows);
 
     // Bind change event listeners to the filter elements
-    areaMinSelect.addEventListener("change", filterData);
-    areaMaxSelect.addEventListener("change", filterData);
-    priceMinInput.addEventListener("change", filterData);
-    priceMaxInput.addEventListener("change", filterData);
+    areaMinSelect.addEventListener("change", function (e) {
+      filterData();
+      setLabel(e);
+    });
+    areaMaxSelect.addEventListener("change", function (e) {
+      filterData();
+      setLabel(e);
+    });
+    priceMinInput.addEventListener("change", function (e) {
+      filterData();
+      setLabel(e);
+    });
+    priceMaxInput.addEventListener("change", function (e) {
+      filterData();
+      setLabel(e);
+    });
     typesSelect.addEventListener("change", filterData);
-    roomsMinSelect.addEventListener("change", filterData);
-    roomsMaxSelect.addEventListener("change", filterData);
+    roomsMinSelect.addEventListener("change", function (e) {
+      filterData();
+      setLabel(e);
+    });
+    roomsMaxSelect.addEventListener("change", function (e) {
+      filterData();
+      setLabel(e);
+    });
     statusSelect.addEventListener("change", filterData);
     // Define the filterData function to filter the data based on the current values of the filter elements
     function filterData() {
@@ -281,6 +291,13 @@ const data = fetch(fullUrl)
         createTable(filteredData);
       }
     }
+    // set label content
+    function setLabel(e) {
+      console.log(e.target.id);
+      console.log();
+      document.querySelector(`label[for=${e.target.id}]`).textContent =
+        e.target.value;
+    }
     return rows;
   })
   .catch((error) => {
@@ -289,7 +306,16 @@ const data = fetch(fullUrl)
 
 // create the table
 function createTable(rows) {
+  // clear table
   tableBody.innerHTML = "";
+
+  // hide all labels
+  // const d2Labels = document.querySelectorAll(".d2-label");
+  // [...d2Labels].map((label) => {
+  //   label.style.display = "none";
+  // });
+
+  // create the table and add listeners to its rows
   rows.map((row) => {
     // console.log(row.c);
     if (row.c[6].v === 1) {
@@ -312,6 +338,7 @@ function createTable(rows) {
               </tr>`;
     }
 
+    // add listeners to table rows and pop up
     const unitsRows = document.querySelectorAll(".units-rows");
     [...unitsRows].map((row) => {
       row.addEventListener("mouseenter", function () {
@@ -356,6 +383,12 @@ function createTable(rows) {
       });
     });
   });
+
+  // show labels
+  // rows.map((row) => {
+  //   document.querySelector(`#d2-${row.c[3].v}`).style.display = "block";
+  //   console.log(`#d2-${row.c[3].v}`);
+  // });
 }
 
 // close the pop up
@@ -365,14 +398,14 @@ document.querySelector(".close-pop-up").addEventListener("click", function () {
 });
 
 // go full screen mode
-fullScreenBtn.addEventListener("click", () => {
-  if (document.fullscreenElement === fullScreenContent) {
-    document.exitFullscreen();
-    console.log("first");
-  } else {
-    fullScreenContent.requestFullscreen();
-  }
-});
+// fullScreenBtn.addEventListener("click", () => {
+//   if (document.fullscreenElement === fullScreenContent) {
+//     document.exitFullscreen();
+//     console.log("first");
+//   } else {
+//     fullScreenContent.requestFullscreen();
+//   }
+// });
 // // filters for table
 // roomRange.addEventListener("change", function (e) {
 //   tableBody.replaceChildren();

@@ -160,7 +160,7 @@
               <!-- 3d -->
               <div class="wrapper-3d">
                 <div class="image-container">
-                  <img src="/assets/images/2D/3D_WATERFALL.jfif" alt="Image" />
+                  <img src="/assets/images/2D/General - 01.webp" alt="Image" />
                   <span class="d3-label label-1" id="d3-B-SD-116"
                     >B-SD-116</span
                   >
@@ -173,117 +173,144 @@
           </div>
           <div class="col-md-1"></div>
           <!-- table -->
-          <div class="col-sm-12 col-md-4" id="table">
+          <div class="col-sm-12 col-md-4 position-relative" id="table">
+            <h2>The Waterfall Village</h2>
             <!-- form -->
             <form>
-              <label for="area-min">Area Min:</label>
-              <input
-                type="number"
-                id="area-min"
-                name="area-min"
-                min="120"
-                max="220"
-                step="50"
-                value="120"
-              />
+              <div class="d-flex justify-content-between mb-3">
+                <div>
+                  <h6>Types:</h6>
+                  <select id="form-types" name="types">
+                    <!-- <option value="all">All</option> -->
+                    <option value="all">All</option>
+                    <option value="Penthouse Chalet">Penthouse Chalet</option>
+                    <option value="Stand alone Villa Extra Room">
+                      Stand alone Villa Extra Room
+                    </option>
+                    <option value="Stand alone Villa">Stand alone Villa</option>
+                    <option value="Town House">Town House</option>
+                    <option value="Town House Corner">Town House Corner</option>
+                    <option value="Senior Chalet">Senior Chalet</option>
+                    <option value="Chalet">Chalet</option>
+                    <option value="Garden Senior Chalet">
+                      Garden Senior Chalet
+                    </option>
+                  </select>
+                </div>
 
-              <label for="area-max">Area Max:</label>
-              <input
-                type="number"
-                id="area-max"
-                name="area-max"
-                min="230"
-                max="330"
-                step="50"
-                value="330"
-              />
+                <div class="form-status-container">
+                  <h6>Status:</h6>
 
-              <label for="price-min">Price Min:</label>
-              <input
-                type="number"
-                id="price-min"
-                name="price-min"
-                min="5"
-                max="10"
-                step="5"
-                value="5"
-              />
+                  <select id="status" name="status">
+                    <option value="all">All</option>
+                    <option value="available">available</option>
+                    <option value="not available">not available</option>
+                    <option value="reserved">reserved</option>
+                    <option value="Blocked">Blocked</option>
+                    <option value="all">All</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="form-area mb-2 position-relative">
+                  <h6>Area</h6>
 
-              <label for="price-max">Price Max:</label>
-              <input
-                type="number"
-                id="price-max"
-                name="price-max"
-                min="15"
-                max="20"
-                step="5"
-                value="20"
-              />
+                  <label for="area-min" class="position-absolute">120</label>
+                  <input
+                    type="range"
+                    id="area-min"
+                    name="area-min"
+                    min="120"
+                    max="220"
+                    step="50"
+                    value="120"
+                  />
 
-              <label for="rooms-min">Rooms Min:</label>
-              <input
-                type="number"
-                id="rooms-min"
-                name="rooms-min"
-                min="2"
-                max="3"
-                step="1"
-                value="2"
-              />
+                  <input
+                    type="range"
+                    id="area-max"
+                    name="area-max"
+                    min="230"
+                    max="330"
+                    step="50"
+                    value="330"
+                  />
+                  <label for="area-max" class="position-absolute">330</label>
+                </div>
 
-              <label for="rooms-max">Rooms Max:</label>
-              <input
-                type="number"
-                id="rooms-max"
-                name="rooms-max"
-                min="4"
-                max="5"
-                step="1"
-                value="5"
-              />
+                <div class="form-price mb-2 position-relative">
+                  <h6>Price</h6>
+                  <label for="price-min" class="position-absolute">5</label>
+                  <input
+                    type="range"
+                    id="price-min"
+                    name="price-min"
+                    min="5"
+                    max="10"
+                    step="5"
+                    value="5"
+                  />
 
-              <label for="types">Types:</label>
-              <select id="types" name="types">
-                <!-- <option value="all">All</option> -->
-                <option value="all">All</option>
-                <option value="Penthouse Chalet">Penthouse Chalet</option>
-                <option value="Stand alone Villa Extra Room">
-                  Stand alone Villa Extra Room
-                </option>
-                <option value="Stand alone Villa">Stand alone Villa</option>
-                <option value="Town House">Town House</option>
-                <option value="Town House Corner">Town House Corner</option>
-                <option value="Senior Chalet">Senior Chalet</option>
-                <option value="Chalet">Chalet</option>
-                <option value="Garden Senior Chalet">
-                  Garden Senior Chalet
-                </option>
-              </select>
+                  <input
+                    type="range"
+                    id="price-max"
+                    name="price-max"
+                    min="15"
+                    max="20"
+                    step="5"
+                    value="20"
+                  />
+                  <label for="price-max" class="position-absolute">20</label>
+                </div>
 
-              <label for="status">Status:</label>
-              <select id="status" name="status">
-                <option value="all">All</option>
-                <option value="available">available</option>
-                <option value="not available">not available</option>
-                <option value="reserved">reserved</option>
-                <option value="Blocked">Blocked</option>
-                <option value="all">All</option>
-              </select>
+                <div class="form-room mb-2 position-relative">
+                  <h6>Room</h6>
+                  <label for="rooms-min" class="position-absolute">2</label>
+                  <input
+                    type="range"
+                    id="rooms-min"
+                    name="rooms-min"
+                    min="2"
+                    max="3"
+                    step="1"
+                    value="2"
+                  />
+
+                  <input
+                    type="range"
+                    id="rooms-max"
+                    name="rooms-max"
+                    min="4"
+                    max="5"
+                    step="1"
+                    value="5"
+                  />
+                  <label for="rooms-max" class="position-absolute">5</label>
+                </div>
+              </div>
             </form>
             <!-- table -->
-            <table class="table">
-              <thead class="table-dark">
-                <tr>
-                  <th scope="col">Unit Code</th>
-                  <th scope="col">Size</th>
-                  <th scope="col">Price</th>
-                  <th scope="col">Rooms</th>
-                  <th scope="col">type</th>
-                </tr>
-              </thead>
-              <tbody id="tabel-body"></tbody>
-            </table>
+            <div class="table-container">
+              <table class="table">
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">Unit Code</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Rooms</th>
+                    <th scope="col">type</th>
+                  </tr>
+                </thead>
+                <tbody id="tabel-body"></tbody>
+              </table>
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="container position-relative footer">
+        <!-- footer -->
+        <div class="footer-content position-absolute">
+          <a>Powered By<span> ET Interactive</span></a>
         </div>
       </div>
     </section>

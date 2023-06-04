@@ -1,6 +1,18 @@
 #water-fall {
   padding-top: 10px;
-
+  .footer {
+    height: 20px;
+    .footer-content {
+      right: 0%;
+      bottom: 3%;
+      width: 24%;
+      z-index: 3;
+      font-size: 8px;
+      span {
+        font-weight: 800;
+      }
+    }
+  }
   .wrapper-2d,
   .wrapper-3d {
     max-width: 100%;
@@ -126,8 +138,84 @@
   }
   #table {
     font-size: 10px;
-    max-height: 600px;
-    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    h2 {
+      color: #6c757d;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    form {
+      font-size: 12px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+      padding: 12px;
+      margin-bottom: 25px;
+      h6 {
+        font-size: 12px;
+      }
+      .form-status-container {
+        width: 50%;
+      }
+
+      label[for="area-min"],
+      label[for="area-max"],
+      label[for="price-min"],
+      label[for="price-max"],
+      label[for="rooms-min"],
+      label[for="rooms-max"] {
+        top: 100%;
+      }
+
+      label[for="area-max"] {
+        left: 80%;
+      }
+      label[for="price-min"] {
+        left: 6%;
+      }
+      label[for="price-max"] {
+        left: 82%;
+      }
+      label[for="rooms-min"] {
+        left: 6%;
+      }
+      label[for="rooms-max"] {
+        left: 84%;
+      }
+
+      #area-min {
+        transform: translateX(4px);
+      }
+      #price-min {
+        transform: translateX(4px);
+      }
+      #rooms-min {
+        transform: translateX(4px);
+      }
+      input[type="range"] {
+        -webkit-appearance: none;
+        background-color: #adb5bd;
+        outline: none;
+        border-radius: 5px;
+        height: 2px;
+        width: 45%;
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          background: black;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #adb5bd;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .table-container {
+      max-height: 350px;
+      overflow-y: scroll;
+    }
     .units-rows:hover {
       background-color: #ccc;
     }
