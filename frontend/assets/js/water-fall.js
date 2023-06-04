@@ -6,7 +6,7 @@ const d2 = document.querySelector(".wrapper-2d");
 const tableRow = document.createElement("tr");
 const tableBody = document.querySelector("#tabel-body");
 const labels = document.querySelectorAll("#cabans .my-label");
-// Assume your filter form has IDs for the select elements and input fields
+//  filter form IDs for the select  input fields
 const areaMinSelect = document.getElementById("area-min");
 const areaMaxSelect = document.getElementById("area-max");
 const priceMinInput = document.getElementById("price-min");
@@ -64,6 +64,7 @@ const data = fetch(fullUrl)
     console.log(rows);
 
     createTable(rows);
+    createLabels(rows);
 
     // Bind change event listeners to the filter elements
     areaMinSelect.addEventListener("change", function (e) {
@@ -113,6 +114,7 @@ const data = fetch(fullUrl)
       };
 
       console.log(filters);
+      console.log(rows);
       // check all types
 
       // types all and status all
@@ -142,22 +144,13 @@ const data = fetch(fullUrl)
             return false;
           }
 
-          // // // Check if the type matches the filter
-          // if (filters.types && row.c[13].v !== filters.types) {
-          //   return false;
-          // }
-
-          // Check if the status matches the filter
-          // if (filters.status && row.c[0].v !== filters.status) {
-          //   return false;
-          // }
-
           // If all filters pass, include the row in the filtered data
           return true;
         });
         // Update the table to display the filtered data
         console.log(filteredData);
         createTable(filteredData);
+        createLabels(filteredData);
       }
 
       // types all
@@ -203,6 +196,7 @@ const data = fetch(fullUrl)
         // Update the table to display the filtered data
         console.log(filteredData);
         createTable(filteredData);
+        createLabels(filteredData);
       } else if (filters.status === "all") {
         const filteredData = rows.filter((row) => {
           // Check if the area matches the filter
@@ -245,6 +239,7 @@ const data = fetch(fullUrl)
         // Update the table to display the filtered data
         console.log(filteredData);
         createTable(filteredData);
+        createLabels(filteredData);
       } else {
         // Filter the data based on the filter values
         const filteredData = rows.filter((row) => {
@@ -289,6 +284,7 @@ const data = fetch(fullUrl)
         // Update the table to display the filtered data
         console.log(filteredData);
         createTable(filteredData);
+        createLabels(filteredData);
       }
     }
     // set label content
@@ -298,7 +294,7 @@ const data = fetch(fullUrl)
       document.querySelector(`label[for=${e.target.id}]`).textContent =
         e.target.value;
     }
-    return rows;
+    // return rows;
   })
   .catch((error) => {
     console.log(error);
@@ -383,105 +379,62 @@ function createTable(rows) {
       });
     });
   });
-
-  // show labels
-  // rows.map((row) => {
-  //   document.querySelector(`#d2-${row.c[3].v}`).style.display = "block";
-  //   console.log(`#d2-${row.c[3].v}`);
-  // });
 }
 
+// create Labels on image
+function createLabels(rows) {
+  const allD2Labels = document.querySelectorAll(".d2-label");
+  allD2Labels.forEach((lable) => {
+    lable.remove();
+  });
+  rows.map((row) => {
+    const spanElem = document.createElement("span");
+    spanElem.classList.add("d2-label");
+    spanElem.setAttribute("id", `d2-${row.c[3].v}`);
+    spanElem.addEventListener("mouseover", function () {
+      console.log(this);
+      this.classList.add("anime");
+      document.querySelector(`#r-${row.c[3].v}`).classList.add("active");
+    });
+    spanElem.addEventListener("mouseout", function () {
+      console.log("ouy");
+      this.classList.remove("anime");
+      document.querySelector(`#r-${row.c[3].v}`).classList.remove("active");
+    });
+    spanElem.addEventListener("click", function () {
+      const label = document.querySelector(`#d2-${row.c[3].v}`);
+      const labelPosition = label.getBoundingClientRect();
+      const imagePosition = label.parentElement.getBoundingClientRect();
+      const labelTop =
+        ((labelPosition.top - imagePosition.top) / imagePosition.height) * 100;
+      const labelLeft =
+        ((labelPosition.left - imagePosition.left) / imagePosition.width) * 100;
+      console.log(labelTop, labelLeft);
+      // get the data from row element
+      const unitId = document.querySelector(
+        `#r-${row.c[3].v} .unit-id`
+      ).innerText;
+      const unitArea = document.querySelector(
+        `#r-${row.c[3].v} .unit-area`
+      ).innerText;
+      const unitRoom = document.querySelector(
+        `#r-${row.c[3].v} .unit-room`
+      ).innerText;
+      console.log(unitId, unitArea, unitRoom);
+      popUp.style.display = "flex";
+      popUp.style.top = `${labelTop}%`;
+      popUp.style.left = `${labelLeft}%`;
+      popUp.querySelector(
+        ".pop-up-heading span:first-child"
+      ).innerText = `ID :${unitId}`;
+      popUp.querySelector(".pop-up-rooms span").innerText = unitRoom;
+      popUp.querySelector(".pop-up-area span").innerText = unitArea;
+    });
+    document.querySelector("#d2-img-container").append(spanElem);
+  });
+}
 // close the pop up
 document.querySelector(".close-pop-up").addEventListener("click", function () {
   console.log("close");
   popUp.style.display = "none";
 });
-
-// go full screen mode
-// fullScreenBtn.addEventListener("click", () => {
-//   if (document.fullscreenElement === fullScreenContent) {
-//     document.exitFullscreen();
-//     console.log("first");
-//   } else {
-//     fullScreenContent.requestFullscreen();
-//   }
-// });
-// // filters for table
-// roomRange.addEventListener("change", function (e) {
-//   tableBody.replaceChildren();
-//   [...labels].map((label) => {
-//     label.style.visibility = "hidden";
-//   });
-//   rows.map((row) => {
-//     if (
-//       row.c[1].v === "available" &&
-//       row.c[4].v === Number(e.target.value)
-//     ) {
-//       // console.log(typeRange.value);
-//       // console.log(row.c[3].v);
-//       // console.log(typeRange.value == row.c[3].v);
-//       if (typeRange.value === "all" || typeRange.value === row.c[3].v) {
-//         document.querySelector(`#${row.c[2].v}`).style.visibility =
-//           "visible";
-//         tableBody.innerHTML += `
-//         <tr class='units-rows' id='r-${row.c[2].v}'>
-//         <td>${row.c[2].v}</td>
-//         <td>${row.c[4].v}</td>
-//         <td>${row.c[3].v}</td>
-//         <td>${row.c[5].v}</td>
-//         </tr>`;
-//       }
-//     }
-//   });
-// });
-
-// typeRange.addEventListener("change", function (e) {
-//   console.log(e.target.value);
-//   console.log(roomRange.value);
-//   tableBody.replaceChildren();
-//   [...labels].map((label) => {
-//     label.style.visibility = "hidden";
-//   });
-//   rows.map((row) => {
-//     if (row.c[1].v === "available" && e.target.value === "all") {
-//       document.querySelector(`#${row.c[2].v}`).style.visibility = "visible";
-//       tableBody.innerHTML += `
-//         <tr class='units-rows' id='r-${row.c[2].v}'>
-//         <td>${row.c[2].v}</td>
-//         <td>${row.c[4].v}</td>
-//         <td>${row.c[3].v}</td>
-//         <td>${row.c[5].v}</td>
-//         </tr>`;
-//     }
-//     if (row.c[1].v === "available" && e.target.value === row.c[3].v) {
-//       document.querySelector(`#${row.c[2].v}`).style.visibility = "visible";
-//       tableBody.innerHTML += `
-//         <tr class='units-rows' id='r-${row.c[2].v}'>
-//         <td>${row.c[2].v}</td>
-//         <td>${row.c[4].v}</td>
-//         <td>${row.c[3].v}</td>
-//         <td>${row.c[5].v}</td>
-//         </tr>`;
-//     }
-//   });
-// });
-
-// clearBtn.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   tableBody.replaceChildren();
-//   [...labels].map((label) => {
-//     label.style.visibility = "hidden";
-//   });
-//   rows.map((row) => {
-//     if (row.c[1].v === "available") {
-//       document.querySelector(`#${row.c[2].v}`).style.visibility = "visible";
-//       tableBody.innerHTML += `
-//         <tr class='units-rows' id='r-${row.c[2].v}'>
-//         <td>${row.c[2].v}</td>
-//         <td>${row.c[4].v}</td>
-//         <td>${row.c[3].v}</td>
-//         <td>${row.c[5].v}</td>
-//         </tr>`;
-//     }
-//   });
-// });

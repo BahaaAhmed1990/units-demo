@@ -60,6 +60,7 @@
     flex-direction: column;
     transform: translate(-50%, -109%);
     box-shadow: -11px 8px 34px 0px rgba(0, 0, 0, 0.75);
+    z-index: 4;
 
     &-heading {
       display: flex;
@@ -82,6 +83,7 @@
     padding: 4px;
     border-radius: 50%;
     border: 3px solid rgb(255 226 21);
+    cursor: pointer;
   }
 
   .d2-label.anime,
@@ -89,6 +91,50 @@
     animation: pluse 2s ease 0s infinite;
   }
   // 2d labels
+  #d2-B-SD-121 {
+    top: 8.5%;
+    left: 80%;
+  }
+  #d2-B-SE-122 {
+    top: 8%;
+    left: 83.5%;
+  }
+  #d2-B-I-301-22 {
+    top: 43.5%;
+    left: 15.5%;
+  }
+  #d2-B-I-302-02 {
+    top: 35%;
+    left: 22.5%;
+  }
+  #d2-B-I-302-03 {
+    top: 35.4%;
+    left: 18.5%;
+  }
+  #d2-B-I-303-03 {
+    top: 34.8%;
+    left: 26%;
+  }
+  #d2-B-I-303-22 {
+    top: 41.5%;
+    left: 29.6%;
+  }
+  #d2-B-TH-304-A {
+    top: 37.9%;
+    left: 37.6%;
+  }
+  #d2-B-TH-304-B {
+    top: 43.9%;
+    left: 39.6%;
+  }
+  #d2-B-TH-304-C {
+    top: 37.1%;
+    left: 43%;
+  }
+  #d2-B-TH-304-D {
+    top: 43.1%;
+    left: 43.6%;
+  }
   #d2-B-SD-115 {
     top: 11.1%;
     left: 59.8%;
@@ -213,9 +259,10 @@
     }
 
     .table-container {
-      max-height: 350px;
+      max-height: 550px;
       overflow-y: scroll;
     }
+    .units-rows.active,
     .units-rows:hover {
       background-color: #ccc;
     }
