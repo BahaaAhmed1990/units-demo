@@ -11920,83 +11920,204 @@ header #navbarNav .nav-item .nav-link.active {
 #water-fall .d2-label,
 #water-fall .d3-label {
   position: absolute;
-  background-color: #333;
-  padding: 4px;
-  border-radius: 50%;
-  border: 3px solid rgb(255, 226, 21);
   cursor: pointer;
+  mix-blend-mode: multiply;
 }
 #water-fall .d2-label.anime,
 #water-fall .d3-label.anime {
   animation: pluse 2s ease 0s infinite;
 }
-#water-fall #d2-B-SD-121 {
-  top: 8.5%;
-  left: 80%;
-}
-#water-fall #d2-B-SE-122 {
-  top: 8%;
-  left: 83.5%;
-}
-#water-fall #d2-B-I-301-22 {
-  top: 43.5%;
-  left: 15.5%;
-}
-#water-fall #d2-B-I-302-02 {
-  top: 35%;
-  left: 22.5%;
-}
-#water-fall #d2-B-I-302-03 {
-  top: 35.4%;
-  left: 18.5%;
-}
-#water-fall #d2-B-I-303-03 {
-  top: 34.8%;
-  left: 26%;
-}
-#water-fall #d2-B-I-303-22 {
-  top: 41.5%;
-  left: 29.6%;
-}
-#water-fall #d2-B-TH-304-A {
-  top: 37.9%;
-  left: 37.6%;
-}
-#water-fall #d2-B-TH-304-B {
-  top: 43.9%;
-  left: 39.6%;
-}
-#water-fall #d2-B-TH-304-C {
-  top: 37.1%;
-  left: 43%;
-}
-#water-fall #d2-B-TH-304-D {
-  top: 43.1%;
-  left: 43.6%;
-}
 #water-fall #d2-B-SD-115 {
-  top: 11.1%;
-  left: 59.8%;
+  background-color: rgb(245, 209, 184);
+  width: 1.5%;
+  height: 4%;
+  top: 9.49%;
+  left: 43%;
+  rotate: -12deg;
 }
 #water-fall #d2-B-SD-116 {
-  top: 10.65%;
-  left: 63.3%;
+  background-color: rgb(245, 209, 184);
+  width: 1.5%;
+  height: 3.9%;
+  top: 9.3%;
+  left: 45.5%;
+  rotate: -12deg;
 }
 #water-fall #d2-B-SD-117 {
-  top: 10.1%;
-  left: 67%;
+  background-color: rgb(245, 209, 184);
+  width: 1.5%;
+  height: 3.9%;
+  top: 9%;
+  left: 47.9%;
+  rotate: -12deg;
 }
 #water-fall #d2-B-SD-118 {
-  top: 9.8%;
-  left: 70.3%;
+  background-color: rgb(245, 209, 184);
+  width: 1.5%;
+  height: 3.9%;
+  top: 8.5%;
+  left: 50.4%;
+  rotate: -12deg;
 }
 #water-fall #d2-B-SD-119 {
-  top: 9.5%;
-  left: 73.3%;
+  background-color: rgb(245, 209, 184);
+  width: 1.5%;
+  height: 3.9%;
+  top: 8%;
+  left: 53%;
+  rotate: -12deg;
 }
 #water-fall #d2-B-SD-120 {
-  top: 8.8%;
-  left: 76.5%;
+  background-color: rgb(245, 209, 184);
+  width: 1.5%;
+  height: 3.9%;
+  top: 7.5%;
+  left: 55.4%;
+  rotate: -7deg;
+}
+#water-fall #d2-B-SD-121 {
+  background-color: rgb(245, 209, 184);
+  width: 1.7%;
+  height: 4.2%;
+  top: 7.1%;
+  left: 57.9%;
+  rotate: -7deg;
+}
+#water-fall #d2-B-SE-122 {
+  background-color: rgb(116, 138, 215);
+  width: 1.59%;
+  height: 3.9%;
+  top: 6.8%;
+  left: 60.4%;
+  rotate: -7deg;
+}
+#water-fall #d2-B-I-301-01 {
+  background-color: rgb(59, 160, 103);
+  width: 2%;
+  height: 2.59%;
+  top: 37.89%;
+  left: 10.99%;
+  rotate: -4deg;
+}
+#water-fall #d2-B-I-301-22 {
+  background-color: rgb(59, 160, 103);
+  width: 2%;
+  height: 2%;
+  top: 35.9%;
+  left: 10.9%;
+  rotate: -4deg;
+}
+#water-fall #d2-B-I-301-03 {
+  background-color: rgb(59, 160, 103);
+  width: 2.2%;
+  height: 2%;
+  top: 36.1%;
+  left: 8.7%;
+  rotate: -4deg;
+}
+#water-fall #d2-B-I-301-04 {
+  background-color: rgb(59, 160, 103);
+  width: 2.2%;
+  height: 2.8%;
+  top: 38.1%;
+  left: 8.8%;
+  rotate: -4deg;
+}
+#water-fall #d2-B-I-302-01 {
+  background-color: rgb(59, 160, 103);
+  width: 2%;
+  height: 2.59%;
+  top: 36.3%;
+  left: 15.9%;
+  rotate: -4deg;
+}
+#water-fall #d2-B-I-302-04 {
+  background-color: rgb(59, 160, 103);
+  width: 2%;
+  height: 2.68%;
+  top: 36.6%;
+  left: 13.9%;
+  rotate: -4deg;
+}
+#water-fall #d2-B-I-302-02 {
+  background-color: rgb(59, 160, 103);
+  width: 2%;
+  height: 2%;
+  top: 34.3%;
+  left: 15.9%;
+  rotate: -4deg;
+}
+#water-fall #d2-B-I-302-03 {
+  background-color: rgb(59, 160, 103);
+  width: 2.2%;
+  height: 2%;
+  top: 34.6%;
+  left: 13.7%;
+  rotate: -4deg;
+}
+#water-fall #d2-B-I-303-01 {
+  background-color: rgb(59, 160, 103);
+  width: 2%;
+  height: 2.59%;
+  top: 35.5%;
+  left: 20.99%;
+  rotate: -7deg;
+}
+#water-fall #d2-B-I-303-03 {
+  background-color: rgb(59, 160, 103);
+  width: 2.2%;
+  height: 2%;
+  top: 33.9%;
+  left: 18.7%;
+  rotate: -7deg;
+}
+#water-fall #d2-B-I-303-22 {
+  background-color: rgb(59, 160, 103);
+  width: 2%;
+  height: 2%;
+  top: 33.49%;
+  left: 20.87%;
+  rotate: -8deg;
+}
+#water-fall #d2-B-I-303-04 {
+  background-color: rgb(59, 160, 103);
+  width: 2.1%;
+  height: 2.59%;
+  top: 35.9%;
+  left: 18.9%;
+  rotate: -7deg;
+}
+#water-fall #d2-B-TH-304-A {
+  background-color: rgb(233, 213, 225);
+  width: 2.5%;
+  height: 1.4%;
+  top: 37.2%;
+  left: 27.4%;
+  rotate: -6deg;
+}
+#water-fall #d2-B-TH-304-B {
+  background-color: rgb(233, 213, 225);
+  width: 2%;
+  height: 1.7%;
+  top: 38.6%;
+  left: 28%;
+  rotate: -6deg;
+}
+#water-fall #d2-B-TH-304-C {
+  background-color: rgb(233, 213, 225);
+  width: 2.5%;
+  height: 1.4%;
+  top: 36.7%;
+  left: 29.9%;
+  rotate: -6deg;
+}
+#water-fall #d2-B-TH-304-D {
+  background-color: rgb(233, 213, 225);
+  width: 2.4%;
+  height: 1.75%;
+  top: 38.1%;
+  left: 30.1%;
+  rotate: -8deg;
 }
 #water-fall #d3-B-SD-116 {
   top: 20%;
