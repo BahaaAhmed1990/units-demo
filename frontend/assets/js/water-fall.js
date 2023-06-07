@@ -317,11 +317,11 @@ function createTable(rows) {
     if (row.c[6].v === 1) {
       tableBody.innerHTML += `
               <tr class='units-rows' id='r-${row.c[3].v}'>
-                <td>${row.c[3].v}</td>
-              <td>${row.c[9].v}m2</td>
-              <td>${row.c[12].v}</td>
-              <td>${row.c[5].v}+1</td>
-              <td>${row.c[13].v}</td>
+                <td class="unit-id">${row.c[3].v}</td>
+              <td class="unit-area">${row.c[9].v}m2</td>
+              <td class="unit-price">${row.c[12].v}</td>
+              <td class="unit-room">${row.c[5].v}+1</td>
+              <td class="unit-type">${row.c[13].v}</td>
               </tr>`;
     } else {
       tableBody.innerHTML += `
