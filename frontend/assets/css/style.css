@@ -11927,6 +11927,27 @@ header #navbarNav .nav-item .nav-link.active {
   border-radius: 50%;
   border: 1px solid black;
 }
+@media (max-width: 600px) {
+  #water-fall .d2-label,
+  #water-fall .d3-label {
+    width: 3px;
+    height: 3px;
+  }
+}
+@media (min-width: 768px) {
+  #water-fall .d2-label,
+  #water-fall .d3-label {
+    width: 4px;
+    height: 4px;
+  }
+}
+@media (min-width: 992px) {
+  #water-fall .d2-label,
+  #water-fall .d3-label {
+    width: 7px;
+    height: 7px;
+  }
+}
 #water-fall .d2-label.anime,
 #water-fall .d3-label.anime {
   animation: pluse 2s ease 0s infinite;
