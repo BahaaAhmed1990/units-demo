@@ -349,7 +349,14 @@ function createTable(rows) {
       unitRow.addEventListener("click", function () {
         let rowId = this.id.slice(2);
         console.log(rowId);
-        console.log(row);
+        console.log(rows);
+        const selectedUnit = rows.filter((row) => {
+          if (row.c[3].v === rowId) {
+            return true;
+          }
+          return false;
+        });
+        console.log(selectedUnit);
         [...unitsRows].map((row) => {
           row.classList.remove("clicked");
         });
@@ -382,14 +389,18 @@ function createTable(rows) {
         popUp.querySelector(".pop-up-heading .label").innerText = `${unitId}`;
         popUp.querySelector(
           ".content .content-status"
-        ).innerText = `${row.c[0].v}`;
-        if (row.c[0].v === "available") {
+        ).innerText = `${selectedUnit[0].c[0].v}`;
+        if (selectedUnit[0].c[0].v === "available") {
           popUp.querySelector(".content .content-color").style.backgroundColor =
             "green";
         }
-        if (row.c[0].v === "not available") {
+        if (selectedUnit[0].c[0].v === "not available") {
           popUp.querySelector(".content .content-color").style.backgroundColor =
             "red";
+        }
+        if (selectedUnit[0].c[0].v === "reserved") {
+          popUp.querySelector(".content .content-color").style.backgroundColor =
+            "orange";
         }
         popUp.querySelector(".pop-up-type .content").innerText = `${unitType}`;
         popUp.querySelector(
@@ -411,6 +422,7 @@ function createTable(rows) {
 // create Labels on image
 function createLabels(rows) {
   const allD2Labels = document.querySelectorAll(".d2-label");
+  const unitsRows = document.querySelectorAll(".units-rows");
   allD2Labels.forEach((lable) => {
     lable.remove();
   });
@@ -430,6 +442,9 @@ function createLabels(rows) {
     });
     spanElem.addEventListener("click", function () {
       console.log(row);
+      [...unitsRows].map((row) => {
+        row.classList.remove("clicked");
+      });
       document.querySelector(`#r-${row.c[3].v}`).classList.add("clicked");
       // console.log(tableRow);
       const label = document.querySelector(`#d2-${row.c[3].v}`);
@@ -469,6 +484,10 @@ function createLabels(rows) {
       if (row.c[0].v === "not available") {
         popUp.querySelector(".content .content-color").style.backgroundColor =
           "red";
+      }
+      if (row.c[0].v === "reserved") {
+        popUp.querySelector(".content .content-color").style.backgroundColor =
+          "orange";
       }
       popUp.querySelector(".pop-up-type .content").innerText = `${unitType}`;
       popUp.querySelector(
