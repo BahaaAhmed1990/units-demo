@@ -48,7 +48,7 @@
 
     <!-- water-fall zone -->
     <section id="water-fall">
-      <div class="container">
+      <div class="container-fluid">
         <!-- toggle button -->
         <div class="control-btn">
           <div class="toggle-button">
@@ -71,12 +71,28 @@
                   <img src="/assets/images/2D/2d_test.jpg" alt="Image" />
                   <!-- pop up box -->
                   <div class="pop-up">
-                    <h5 class="pop-up-heading">
-                      <span></span>
+                    <div class="close">
                       <button class="close-pop-up">X</button>
-                    </h5>
-                    <p class="pop-up-rooms">Rooms :<span></span></p>
-                    <p class="pop-up-area">Area :<span></span></p>
+                    </div>
+                    <h6 class="pop-up-heading">
+                      <p class="label"></p>
+                      <p class="content">
+                        <span class="content-color"></span>
+                        <span class="content-status"></span>
+                      </p>
+                    </h6>
+                    <div class="pop-up-type">
+                      <p class="label">Type :</p>
+                      <p class="content"></p>
+                    </div>
+                    <div class="pop-up-rooms">
+                      <p class="label">Rooms :</p>
+                      <p class="content"></p>
+                    </div>
+                    <div class="pop-up-area">
+                      <p class="label">Area :</p>
+                      <p class="content"></p>
+                    </div>
                     <button class="pop-up-button">more info</button>
                     <div class="triangle"></div>
                   </div>
@@ -219,7 +235,7 @@
             <!-- table -->
             <div class="table-container">
               <table class="table">
-                <thead class="table-dark">
+                <thead class="table-light">
                   <tr>
                     <th scope="col">Unit Code</th>
                     <th scope="col">Size</th>

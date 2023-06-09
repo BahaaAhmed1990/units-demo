@@ -336,19 +336,23 @@ function createTable(rows) {
 
     // add listeners to table rows and pop up
     const unitsRows = document.querySelectorAll(".units-rows");
-    [...unitsRows].map((row) => {
-      row.addEventListener("mouseenter", function () {
+    [...unitsRows].map((unitRow) => {
+      unitRow.addEventListener("mouseenter", function () {
         let rowId = String(this.id.slice(2));
         console.log(rowId);
         document.querySelector(`#d2-${rowId}`).classList.add("anime");
       });
-      row.addEventListener("mouseleave", function () {
+      unitRow.addEventListener("mouseleave", function () {
         let rowId = this.id.slice(2);
         document.querySelector(`#d2-${rowId}`).classList.remove("anime");
       });
-      row.addEventListener("click", function () {
+      unitRow.addEventListener("click", function () {
         let rowId = this.id.slice(2);
         console.log(rowId);
+        console.log(row);
+        [...unitsRows].map((row) => {
+          row.classList.remove("clicked");
+        });
         document.querySelector(`#r-${rowId}`).classList.add("clicked");
         const label = document.querySelector(`#d2-${rowId}`);
         const labelPosition = label.getBoundingClientRect();
@@ -365,6 +369,9 @@ function createTable(rows) {
         const unitArea = document.querySelector(
           `#r-${rowId} .unit-area`
         ).innerText;
+        const unitType = document.querySelector(
+          `#r-${row.c[3].v} .unit-type`
+        ).innerText;
         const unitRoom = document.querySelector(
           `#r-${rowId} .unit-room`
         ).innerText;
@@ -372,11 +379,23 @@ function createTable(rows) {
         popUp.style.display = "flex";
         popUp.style.top = `${labelTop}%`;
         popUp.style.left = `${labelLeft}%`;
+        popUp.querySelector(".pop-up-heading .label").innerText = `${unitId}`;
         popUp.querySelector(
-          ".pop-up-heading span:first-child"
-        ).innerText = `ID :${unitId}`;
-        popUp.querySelector(".pop-up-rooms span").innerText = unitRoom;
-        popUp.querySelector(".pop-up-area span").innerText = unitArea;
+          ".content .content-status"
+        ).innerText = `${row.c[0].v}`;
+        if (row.c[0].v === "available") {
+          popUp.querySelector(".content .content-color").style.backgroundColor =
+            "green";
+        }
+        if (row.c[0].v === "not available") {
+          popUp.querySelector(".content .content-color").style.backgroundColor =
+            "red";
+        }
+        popUp.querySelector(".pop-up-type .content").innerText = `${unitType}`;
+        popUp.querySelector(
+          ".pop-up-rooms .content"
+        ).innerText = `${unitRoom} BedRooms`;
+        popUp.querySelector(".pop-up-area .content").innerText = `${unitArea} `;
         document
           .querySelector(".close-pop-up")
           .addEventListener("click", function () {
@@ -410,6 +429,7 @@ function createLabels(rows) {
       document.querySelector(`#r-${row.c[3].v}`).classList.remove("active");
     });
     spanElem.addEventListener("click", function () {
+      console.log(row);
       document.querySelector(`#r-${row.c[3].v}`).classList.add("clicked");
       // console.log(tableRow);
       const label = document.querySelector(`#d2-${row.c[3].v}`);
@@ -424,6 +444,10 @@ function createLabels(rows) {
       const unitId = document.querySelector(
         `#r-${row.c[3].v} .unit-id`
       ).innerText;
+      const unitType = document.querySelector(
+        `#r-${row.c[3].v} .unit-type`
+      ).innerText;
+
       const unitArea = document.querySelector(
         `#r-${row.c[3].v} .unit-area`
       ).innerText;
@@ -434,11 +458,23 @@ function createLabels(rows) {
       popUp.style.display = "flex";
       popUp.style.top = `${labelTop}%`;
       popUp.style.left = `${labelLeft}%`;
+      popUp.querySelector(".pop-up-heading .label").innerText = `${unitId}`;
       popUp.querySelector(
-        ".pop-up-heading span:first-child"
-      ).innerText = `ID :${unitId}`;
-      popUp.querySelector(".pop-up-rooms span").innerText = unitRoom;
-      popUp.querySelector(".pop-up-area span").innerText = unitArea;
+        ".content .content-status"
+      ).innerText = `${row.c[0].v}`;
+      if (row.c[0].v === "available") {
+        popUp.querySelector(".content .content-color").style.backgroundColor =
+          "green";
+      }
+      if (row.c[0].v === "not available") {
+        popUp.querySelector(".content .content-color").style.backgroundColor =
+          "red";
+      }
+      popUp.querySelector(".pop-up-type .content").innerText = `${unitType}`;
+      popUp.querySelector(
+        ".pop-up-rooms .content"
+      ).innerText = `${unitRoom} BedRooms`;
+      popUp.querySelector(".pop-up-area .content").innerText = `${unitArea} `;
       // close the pop up
       document
         .querySelector(".close-pop-up")

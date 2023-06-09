@@ -54,28 +54,101 @@
     position: absolute;
     top: 0;
     left: 30%;
-    background-color: white;
+    background-color: #e9ecef;
     width: 200px;
-    height: 165px;
-    border-radius: 5px;
+    height: 146px;
+    border-radius: 24px;
     display: none;
     flex-direction: column;
     transform: translate(-50%, -109%);
     box-shadow: -11px 8px 34px 0px rgba(0, 0, 0, 0.75);
     z-index: 4;
+    font-size: 12px;
+    padding: 10px;
 
-    &-heading {
+    .close {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 8px;
+
+      .close-pop-up {
+        border: 2px solid black;
+        font-size: 8px;
+        background-color: transparent;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 7px;
+        color: black;
+        font-weight: 700;
+      }
+    }
+
+    .pop-up-heading,
+    .pop-up-type,
+    .pop-up-rooms,
+    .pop-up-area {
       display: flex;
       justify-content: space-between;
+      p {
+        margin: 0;
+      }
+      .label {
+        font-size: 10px;
+      }
+      .content {
+        font-weight: 900;
+        font-size: 8px;
+        width: 70%;
+      }
     }
-  }
-  .triangle {
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-right: 20px solid rgb(255, 255, 255);
-    transform: rotateZ(268deg) translateX(2px) translateY(94px);
+    .pop-up-heading {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      .label {
+        font-weight: bold;
+      }
+      .content {
+        height: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 50%;
+        &-color {
+          background-color: #dc3545;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          display: inline-block;
+          margin-left: 5px;
+        }
+        &-status {
+          margin-right: 19px;
+        }
+      }
+    }
+
+    .pop-up-button {
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 5px;
+      border: none;
+      border-radius: 6px;
+      background-color: #adb5bd;
+    }
+    .triangle {
+      width: 0;
+      height: 0;
+      border-top: 20px solid #e9ecef00;
+      border-bottom: 20px solid #e9ecef03;
+      border-right: 20px solid #e9eceffc;
+      transform: rotateZ(268deg) translateX(-4px) translateY(81px);
+    }
   }
 
   .d2-label,
@@ -86,7 +159,8 @@
     width: 0.85%;
     height: 1.2%;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid #5d5c5cba;
+    animation: pluse 2s ease 0s infinite;
     // extra small devices styles
     @include respond-to("xs") {
       width: 3px;
@@ -116,6 +190,10 @@
     top: 8%;
     left: 43%;
   }
+  #d2-B-SD-R-115 {
+    top: 14%;
+    left: 43.5%;
+  }
   #d2-B-SD-116 {
     // background-color: rgb(245, 209, 184);
     // width: 1.5%;
@@ -123,12 +201,20 @@
     top: 7.6%;
     left: 45.5%;
   }
+  #d2-B-SD-R-116 {
+    top: 13.6%;
+    left: 46%;
+  }
   #d2-B-SD-117 {
     // background-color: rgb(245, 209, 184);
     // width: 1.5%;
     // height: 3.9%;
     top: 7.3%;
     left: 47.9%;
+  }
+  #d2-B-SD-R-117 {
+    top: 13.3%;
+    left: 48.6%;
   }
   #d2-B-SD-118 {
     // background-color: rgb(245, 209, 184);
@@ -184,6 +270,22 @@
     top: 40.8%;
     left: 11.5%;
   }
+  #d2-B-I-301-11 {
+    top: 40.8%;
+    left: 11.5%;
+  }
+  #d2-B-I-301-21 {
+    top: 40.8%;
+    left: 11.5%;
+  }
+  #d2-B-I-301-02 {
+    top: 34%;
+    left: 11.4%;
+  }
+  #d2-B-I-301-12 {
+    top: 34%;
+    left: 11.4%;
+  }
   #d2-B-I-301-22 {
     // background-color: rgb(59 160 103);
     // width: 2%;
@@ -198,10 +300,26 @@
     top: 34.3%;
     left: 8.7%;
   }
+  #d2-B-I-301-13 {
+    top: 34.3%;
+    left: 8.7%;
+  }
+  #d2-B-I-301-23 {
+    top: 34.3%;
+    left: 8.7%;
+  }
   #d2-B-I-301-04 {
     // background-color: rgb(59, 160, 103);
     // width: 2.2%;
     // height: 2.8%;
+    top: 41.1%;
+    left: 9.4%;
+  }
+  #d2-B-I-301-14 {
+    top: 41.1%;
+    left: 9.4%;
+  }
+  #d2-B-I-301-24 {
     top: 41.1%;
     left: 9.4%;
   }
@@ -370,21 +488,61 @@
     top: 39.3%;
     left: 37.5%;
   }
+  #d2-B-TH-307-A {
+    top: 27%;
+    left: 45.2%;
+  }
+  #d2-B-TH-307-B {
+    top: 31.4%;
+    left: 46%;
+  }
+  #d2-B-TH-307-C {
+    top: 26.4%;
+    left: 49%;
+  }
+  #d2-B-TH-307-D {
+    top: 31.4%;
+    left: 49%;
+  }
+  #d2-B-SD-306 {
+    top: 32.5%;
+    left: 39.2%;
+  }
+  #d2-B-SD-R-306 {
+    top: 38.5%;
+    left: 40%;
+  }
   #d2-B-SF-308 {
     top: 26%;
     left: 51.2%;
+  }
+  #d2-B-SF-R-308 {
+    top: 30.8%;
+    left: 51.7%;
   }
   #d2-B-SF-309 {
     top: 25.5%;
     left: 53.5%;
   }
+  #d2-B-SF-R-309 {
+    top: 30.3%;
+    left: 53.9%;
+  }
   #d2-B-SF-310 {
     top: 25.7%;
     left: 55.5%;
   }
+  #d2-B-SF-R-310 {
+    top: 30.7%;
+    left: 56%;
+  }
   #d2-B-SF-311 {
     top: 26%;
     left: 57.8%;
+  }
+  #d2-B-SF-R-311 {
+    top: 30.7%;
+    left: 58%;
   }
   #d2-B-SD-312 {
     top: 25%;
@@ -397,6 +555,56 @@
   #d2-B-SE-313 {
     top: 24.5%;
     left: 62%;
+  }
+
+  #d2-B-H-401-01 {
+    top: 54.8%;
+    left: 9.8%;
+  }
+  #d2-B-H-401-11 {
+    top: 54.8%;
+    left: 9.8%;
+  }
+  #d2-B-H-401-21 {
+    top: 54.8%;
+    left: 9.8%;
+  }
+  #d2-B-H-R-401-21 {
+    top: 54.8%;
+    left: 9.8%;
+  }
+  #d2-B-H-401-02 {
+    top: 54.5%;
+    left: 11.8%;
+  }
+  #d2-B-H-401-12 {
+    top: 54.5%;
+    left: 11.8%;
+  }
+
+  #d2-B-H-402-01 {
+    top: 54.1%;
+    left: 13.8%;
+  }
+  #d2-B-H-402-11 {
+    top: 54.1%;
+    left: 13.8%;
+  }
+  #d2-B-H-402-21 {
+    top: 54.1%;
+    left: 13.8%;
+  }
+  #d2-B-H-R-402-21 {
+    top: 54.1%;
+    left: 13.8%;
+  }
+  #d2-B-H-402-02 {
+    top: 54%;
+    left: 15.8%;
+  }
+  #d2-B-H-402-12 {
+    top: 54%;
+    left: 15.8%;
   }
 
   #d2-B-H-403-01 {
@@ -468,37 +676,134 @@
     top: 50%;
     left: 31.1%;
   }
+  #d2-B-H-406-01 {
+    top: 50%;
+    left: 33.1%;
+  }
+  #d2-B-H-406-11 {
+    top: 50%;
+    left: 33.1%;
+  }
+  #d2-B-H-406-21 {
+    top: 50%;
+    left: 33.1%;
+  }
+  #d2-B-H-R-406-21 {
+    top: 50%;
+    left: 33.1%;
+  }
+  #d2-B-H-406-02 {
+    top: 49.5%;
+    left: 35.1%;
+  }
+  #d2-B-H-406-12 {
+    top: 49.5%;
+    left: 35.1%;
+  }
+
+  #d2-B-H-407-01 {
+    top: 49.4%;
+    left: 37.4%;
+  }
+  #d2-B-H-407-11 {
+    top: 49.4%;
+    left: 37.4%;
+  }
+  #d2-B-H-407-21 {
+    top: 49.4%;
+    left: 37.4%;
+  }
+  #d2-B-H-407-02 {
+    top: 49%;
+    left: 39.4%;
+  }
+  #d2-B-H-407-12 {
+    top: 49%;
+    left: 39.4%;
+  }
+  #d2-B-H-R-407-21 {
+    top: 49%;
+    left: 39.4%;
+  }
   #d2-B-SF-408 {
     top: 40%;
+    left: 44.5%;
+  }
+  #d2-B-SF-R-408 {
+    top: 45%;
     left: 44.5%;
   }
   #d2-B-SF-409 {
     top: 40%;
     left: 46.8%;
   }
+  #d2-B-SF-R-409 {
+    top: 44.8%;
+    left: 46.8%;
+  }
   #d2-B-SF-410 {
     top: 40%;
+    left: 48.8%;
+  }
+  #d2-B-SF-R-410 {
+    top: 45%;
     left: 48.8%;
   }
   #d2-B-SF-411 {
     top: 40%;
     left: 50.8%;
   }
+  #d2-B-SF-R-411 {
+    top: 45%;
+    left: 50.8%;
+  }
   #d2-B-SF-412 {
     top: 39.7%;
+    left: 53%;
+  }
+  #d2-B-SF-R-412 {
+    top: 44.7%;
     left: 53%;
   }
   #d2-B-SF-413 {
     top: 39.7%;
     left: 55.3%;
   }
+  #d2-B-SF-R-413 {
+    top: 44.7%;
+    left: 55.3%;
+  }
   #d2-B-SF-414 {
     top: 39.4%;
+    left: 57.6%;
+  }
+  #d2-B-SF-R-414 {
+    top: 44.4%;
     left: 57.6%;
   }
   #d2-B-SF-415 {
     top: 39.4%;
     left: 59.6%;
+  }
+  #d2-B-SF-R-415 {
+    top: 44.4%;
+    left: 59.9%;
+  }
+  #d2-B-SD-416 {
+    top: 38.8%;
+    left: 61.9%;
+  }
+  #d2-B-SD-R-416 {
+    top: 43.8%;
+    left: 61.9%;
+  }
+  #d2-B-SD-417 {
+    top: 38.8%;
+    left: 63.9%;
+  }
+  #d2-B-SD-R-417 {
+    top: 43.8%;
+    left: 63.9%;
   }
   #d2-B-SE-418 {
     top: 38.5%;
@@ -516,33 +821,98 @@
     top: 48.8%;
     left: 43.5%;
   }
+  #d2-B-SF-R-506 {
+    top: 53.5%;
+    left: 43.7%;
+  }
   #d2-B-SF-507 {
     top: 48.8%;
     left: 46%;
   }
+  #d2-B-SF-R-507 {
+    top: 53%;
+    left: 46%;
+  }
+  #d2-B-TH-508-A {
+    top: 48.7%;
+    left: 48%;
+  }
+  #d2-B-TH-508-B {
+    top: 53.3%;
+    left: 48%;
+  }
+  #d2-B-TH-508-C {
+    top: 48.6%;
+    left: 51%;
+  }
+  #d2-B-TH-508-D {
+    top: 53.3%;
+    left: 51%;
+  }
   #d2-B-SF-509 {
     top: 48.8%;
+    left: 54%;
+  }
+  #d2-B-SF-R-509 {
+    top: 53.5%;
     left: 54%;
   }
   #d2-B-SF-510 {
     top: 48.8%;
     left: 56%;
   }
+  #d2-B-SF-R-510 {
+    top: 53.8%;
+    left: 56%;
+  }
   #d2-B-SF-511 {
     top: 48.8%;
+    left: 58.3%;
+  }
+  #d2-B-SF-R-511 {
+    top: 53.8%;
     left: 58.3%;
   }
   #d2-B-SF-512 {
     top: 48.8%;
     left: 60.3%;
   }
+  #d2-B-SF-R-512 {
+    top: 53.8%;
+    left: 60.3%;
+  }
   #d2-B-SD-R-513 {
     top: 54%;
     left: 62.5%;
   }
+  #d2-B-SE-514 {
+    top: 48%;
+    left: 64.9%;
+  }
   #d2-B-H-R-404-21 {
     top: 52.5%;
     left: 22.1%;
+  }
+  #d2-B-TH-211-A {
+    top: 19.5%;
+    left: 37.4%;
+  }
+  #d2-B-TH-211-B {
+    top: 24.4%;
+    left: 38%;
+  }
+  #d2-B-TH-211-C {
+    top: 19%;
+    left: 41%;
+  }
+  #d2-B-TH-211-D {
+    top: 24%;
+    left: 41%;
+  }
+
+  #d2-B-TH-212-D {
+    top: 22.8%;
+    left: 49.4%;
   }
   #d2-B-TH-212-A {
     top: 18.5%;
@@ -556,59 +926,199 @@
     top: 18%;
     left: 49.4%;
   }
+  #d2-B-H-201-01 {
+    top: 30%;
+    left: 7.5%;
+  }
+  #d2-B-H-201-11 {
+    top: 30%;
+    left: 7.5%;
+  }
+  #d2-B-H-201-21 {
+    top: 30%;
+    left: 7.5%;
+  }
+  #d2-B-H-R-201-21 {
+    top: 30%;
+    left: 7.5%;
+  }
+  #d2-B-H-201-02 {
+    top: 29.7%;
+    left: 9.5%;
+  }
+  #d2-B-H-201-12 {
+    top: 29.7%;
+    left: 9.5%;
+  }
+  #d2-B-H-202-01 {
+    top: 29.7%;
+    left: 11.5%;
+  }
+  #d2-B-H-202-11 {
+    top: 29.7%;
+    left: 11.5%;
+  }
+  #d2-B-H-202-21 {
+    top: 29.7%;
+    left: 11.5%;
+  }
+  #d2-B-H-R-202-21 {
+    top: 29.7%;
+    left: 11.5%;
+  }
+  #d2-B-H-202-02 {
+    top: 29.3%;
+    left: 13.5%;
+  }
+  #d2-B-H-202-12 {
+    top: 29.3%;
+    left: 13.5%;
+  }
+  #d2-B-H-203-01 {
+    top: 28.5%;
+    left: 15.5%;
+  }
+  #d2-B-H-203-11 {
+    top: 28.5%;
+    left: 15.5%;
+  }
+  #d2-B-H-203-21 {
+    top: 28.5%;
+    left: 15.5%;
+  }
+  #d2-B-H-R-203-21 {
+    top: 28.5%;
+    left: 15.5%;
+  }
+  #d2-B-H-203-02 {
+    top: 28.5%;
+    left: 17.5%;
+  }
+  #d2-B-H-203-12 {
+    top: 28.5%;
+    left: 17.5%;
+  }
+  #d2-B-H-204-01 {
+    top: 28.5%;
+    left: 19.5%;
+  }
+  #d2-B-H-204-11 {
+    top: 28.5%;
+    left: 19.5%;
+  }
+  #d2-B-H-204-21 {
+    top: 28.5%;
+    left: 19.5%;
+  }
+  #d2-B-H-R-204-21 {
+    top: 28.5%;
+    left: 19.5%;
+  }
+  #d2-B-H-204-02 {
+    top: 28.2%;
+    left: 21.7%;
+  }
+  #d2-B-H-204-12 {
+    top: 28.2%;
+    left: 21.7%;
+  }
   #d2-B-SF-205 {
     top: 21.5%;
+    left: 25.9%;
+  }
+  #d2-B-SF-R-205 {
+    top: 26.1%;
     left: 25.9%;
   }
   #d2-B-SF-206 {
     top: 21.1%;
     left: 27.6%;
   }
+  #d2-B-SF-R-206 {
+    top: 26%;
+    left: 27.9%;
+  }
   #d2-B-SF-207 {
     top: 20.7%;
     left: 29.6%;
+  }
+  #d2-B-SF-R-207 {
+    top: 25.3%;
+    left: 30%;
   }
   #d2-B-SF-208 {
     top: 20.5%;
     left: 31.6%;
   }
+  #d2-B-SF-R-208 {
+    top: 25.1%;
+    left: 32%;
+  }
   #d2-B-SF-209 {
     top: 20.1%;
     left: 33.6%;
+  }
+  #d2-B-SF-R-209 {
+    top: 25.1%;
+    left: 34%;
   }
   #d2-B-SF-210 {
     top: 19.8%;
     left: 35.6%;
   }
+  #d2-B-SF-R-210 {
+    top: 24.5%;
+    left: 36%;
+  }
   #d2-B-SF-213 {
     top: 17.2%;
     left: 52%;
+  }
+  #d2-B-SF-R-213 {
+    top: 22.2%;
+    left: 52.4%;
   }
   #d2-B-SF-214 {
     top: 17.2%;
     left: 54%;
   }
+  #d2-B-SF-R-214 {
+    top: 21.8%;
+    left: 54.6%;
+  }
   #d2-B-SF-215 {
     top: 16.8%;
     left: 56.4%;
+  }
+  #d2-B-SF-R-215 {
+    top: 21.4%;
+    left: 56.8%;
   }
   #d2-B-SF-216 {
     top: 16.4%;
     left: 58.4%;
   }
+  #d2-B-SF-R-216 {
+    top: 20.8%;
+    left: 58.8%;
+  }
   #d2-B-SF-217 {
     top: 16%;
     left: 60.4%;
+  }
+  #d2-B-SF-R-217 {
+    top: 21%;
+    left: 60.9%;
   }
   #d2-B-SF-218 {
     top: 15.7%;
     left: 62.7%;
   }
-
-  #d2-B-TH-212-D {
-    top: 22.8%;
-    left: 49.4%;
+  #d2-B-SF-R-218 {
+    top: 20.7%;
+    left: 63.3%;
   }
+
   #d2-B-SE-219 {
     top: 14.9%;
     left: 64.4%;
@@ -624,7 +1134,7 @@
   }
   @keyframes pluse {
     0% {
-      box-shadow: 0 0 0 0 rgb(255 226 21);
+      box-shadow: 0 0 0 0 #0dcaf0;
     }
 
     70% {
@@ -642,7 +1152,7 @@
     justify-content: start;
     h2 {
       color: #6c757d;
-      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 22px;
     }
     form {
       font-size: 12px;
