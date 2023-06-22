@@ -40,7 +40,7 @@ switchButton.addEventListener("click", () => {
 // fetch google sheet
 const sheetId = "1dEy8bMqOo1cFngZpmf2hWQZpZedDITPXoGnAoTbxb2g";
 const sheetTitle = "waterfall";
-const sheetRange = "A2:N216";
+const sheetRange = "A2:N242";
 let fullUrl =
   "https://docs.google.com/spreadsheets/d/" +
   sheetId +
