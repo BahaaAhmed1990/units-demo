@@ -48,103 +48,214 @@
 
     <!-- mid zone -->
     <section id="mid">
+      <!-- toggle button -->
       <div class="container-fluid">
+        <div class="control-btn">
+          <div class="toggle-button">
+            <div>
+              <span id="toggle-txt">2D</span>
+            </div>
+            <div class="toggle-switch" id="toggle-switch_body">
+              <div id="toggle-switch_trigger"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid main">
         <div class="row">
-          <div class="col-8">
-            <div class="position-relative">
-              <!-- toggle button -->
-              <div class="control-btn position-absolute">
-                <div class="toggle-button">
-                  <div>
-                    <span id="toggle-txt">2D</span>
+          <div class="col-sm-12 col-md-7">
+            <div class="">
+              <!-- 2d -->
+              <div class="wrapper-2d active">
+                <div class="image-container" id="d2-img-container">
+                  <img src="/assets/images/2D/2D_MEDITERRIAN.jpg" alt="Image" />
+                  <!-- pop up box -->
+                  <div class="pop-up">
+                    <div class="close">
+                      <button class="close-pop-up">X</button>
+                    </div>
+                    <h6 class="pop-up-heading">
+                      <p class="label"></p>
+                      <p class="content">
+                        <span class="content-color"></span>
+                        <span class="content-status"></span>
+                      </p>
+                    </h6>
+                    <div class="pop-up-type">
+                      <p class="label">Type :</p>
+                      <p class="content"></p>
+                    </div>
+                    <div class="pop-up-rooms">
+                      <p class="label">Rooms :</p>
+                      <p class="content"></p>
+                    </div>
+                    <div class="pop-up-area">
+                      <p class="label">Area :</p>
+                      <p class="content"></p>
+                    </div>
+                    <button class="pop-up-button">more info</button>
+                    <div class="triangle"></div>
                   </div>
-                  <div class="toggle-switch" id="toggle-switch_body">
-                    <div id="toggle-switch_trigger"></div>
-                  </div>
+                  <!-- all spans -->
                 </div>
               </div>
 
-              <!-- 2d -->
-              <div class="wrapper-2d position-absolute active">
-                <img
-                  width="852"
-                  height="480"
-                  src="/assets/images/2D/2D_MEDITERRIAN.jpg"
-                  alt="2DWATERFALL"
-                />
-                <span class="position-absolute my-label" id="A-SA-101">1 </span>
-                <span class="position-absolute my-label" id="A-SA-102">2</span>
-                <span class="position-absolute my-label" id="A-SA-103">3</span>
-                <span class="position-absolute my-label" id="A-SA-104">4</span>
-                <span class="position-absolute my-label" id="A-SA-105">5</span>
-                <span class="position-absolute my-label" id="A-SA-106">6</span>
-                <span class="position-absolute my-label" id="A-SA-107">7</span>
-                <span class="position-absolute my-label" id="A-SA-108">8</span>
-                <span class="position-absolute my-label" id="A-SA-109">9</span>
-              </div>
-
               <!-- 3d -->
-              <div class="wrapper-3d position-absolute">
-                <img
-                  width="852"
-                  height="480"
-                  src="/assets/images/2D/2D_MEDITERRIAN.jpg"
-                  alt="3DWATERFALL"
-                />
-                <span class="position-absolute my-label" id="A-SA-101">1 </span>
-                <span class="position-absolute my-label" id="A-SA-102">2</span>
-                <span class="position-absolute my-label" id="A-SA-103">3</span>
-                <span class="position-absolute my-label" id="A-SA-104">4</span>
-                <span class="position-absolute my-label" id="A-SA-105">5</span>
-                <span class="position-absolute my-label" id="A-SA-106">6</span>
-                <span class="position-absolute my-label" id="A-SA-107">7</span>
-                <span class="position-absolute my-label" id="A-SA-108">8</span>
-                <span class="position-absolute my-label" id="A-SA-109">9</span>
+              <div class="wrapper-3d">
+                <div class="image-container">
+                  <img src="/assets/images/2D/General - 01.webp" alt="Image" />
+                  <span class="d3-label label-1" id="d3-B-SD-116"
+                    >B-SD-116</span
+                  >
+                  <span class="d3-label label-2" id="d3-B-SD-117"
+                    >B-SD-117</span
+                  >
+                </div>
               </div>
             </div>
           </div>
+          <div class="col-md-1"></div>
           <!-- table -->
-          <div class="col-4" id="table">
-            <form class="mb-1">
-              <div>
-                <label for="room-range" class="form-label">Room</label>
-                <input
-                  type="range"
-                  class="form-range"
-                  min="0"
-                  max="6"
-                  step="1"
-                  id="room-range"
-                  value="0"
-                />
-              </div>
+          <div class="col-sm-12 col-md-4 position-relative" id="table">
+            <h2>The MEDITERRIAN Village</h2>
+            <!-- form -->
+            <form>
+              <div class="d-flex justify-content-between mb-3">
+                <div>
+                  <h6>Types:</h6>
+                  <select id="form-types" name="types">
+                    <!-- <option value="all">All</option> -->
+                    <option value="all">All</option>
+                    <option value="Penthouse Chalet">Penthouse Chalet</option>
+                    <option value="Stand alone Villa Extra Room">
+                      Stand alone Villa Extra Room
+                    </option>
+                    <option value="Stand alone Villa">Stand alone Villa</option>
+                    <option value="Town House">Town House</option>
+                    <option value="Town House Corner">Town House Corner</option>
+                    <option value="Senior Chalet">Senior Chalet</option>
+                    <option value="Chalet">Chalet</option>
+                    <option value="Garden Senior Chalet">
+                      Garden Senior Chalet
+                    </option>
+                  </select>
+                </div>
 
-              <div>
-                <select
-                  id="type-range"
-                  class="form-select"
-                  aria-label="Default select example"
-                >
-                  <option value="all" selected>all</option>
-                  <option value="6RB">6 bedroom</option>
-                  <option value="5RB">5 bedroom</option>
-                </select>
-              </div>
+                <div class="form-status-container">
+                  <h6>Status:</h6>
 
-              <button id="clear-btn">clear all filters</button>
+                  <select id="status" name="status">
+                    <option value="all">All</option>
+                    <option value="available">available</option>
+                    <option value="not available">not available</option>
+                    <option value="reserved">reserved</option>
+                    <option value="Blocked">Blocked</option>
+                    <option value="all">All</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="form-area mb-2 position-relative">
+                  <h6>Area</h6>
+
+                  <label for="area-min" class="position-absolute">120</label>
+                  <input
+                    type="range"
+                    id="area-min"
+                    name="area-min"
+                    min="120"
+                    max="220"
+                    step="50"
+                    value="120"
+                  />
+
+                  <input
+                    type="range"
+                    id="area-max"
+                    name="area-max"
+                    min="230"
+                    max="330"
+                    step="50"
+                    value="330"
+                  />
+                  <label for="area-max" class="position-absolute">330</label>
+                </div>
+
+                <div class="form-price mb-2 position-relative">
+                  <h6>Price</h6>
+                  <label for="price-min" class="position-absolute">3</label>
+                  <input
+                    type="range"
+                    id="price-min"
+                    name="price-min"
+                    min="3"
+                    max="10"
+                    step="1"
+                    value="3"
+                  />
+
+                  <input
+                    type="range"
+                    id="price-max"
+                    name="price-max"
+                    min="15"
+                    max="20"
+                    step="5"
+                    value="20"
+                  />
+                  <label for="price-max" class="position-absolute">20</label>
+                </div>
+
+                <div class="form-room mb-2 position-relative">
+                  <h6>Room</h6>
+                  <label for="rooms-min" class="position-absolute">2</label>
+                  <input
+                    type="range"
+                    id="rooms-min"
+                    name="rooms-min"
+                    min="2"
+                    max="3"
+                    step="1"
+                    value="2"
+                  />
+
+                  <input
+                    type="range"
+                    id="rooms-max"
+                    name="rooms-max"
+                    min="4"
+                    max="5"
+                    step="1"
+                    value="5"
+                  />
+                  <label for="rooms-max" class="position-absolute">5</label>
+                </div>
+              </div>
             </form>
-            <table class="table">
-              <thead class="table-dark">
-                <tr>
-                  <th scope="col">unit code</th>
-                  <th scope="col">room</th>
-                  <th scope="col">type name</th>
-                  <th scope="col">sellabel area</th>
-                </tr>
-              </thead>
-              <tbody id="tabel-body"></tbody>
-            </table>
+            <!-- table -->
+            <div class="table-container">
+              <table class="table">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">Unit Code</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Rooms</th>
+                    <th scope="col">type</th>
+                  </tr>
+                </thead>
+                <tbody id="tabel-body"></tbody>
+              </table>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="container position-relative footer">
+        <div class="footer-content position-absolute">
+          <a>Powered By<span> ET Interactive</span></a>
         </div>
       </div>
     </section>
