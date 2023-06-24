@@ -1,0 +1,207 @@
+#dashboard {
+  .wrapper-2d {
+    max-width: 100%;
+    padding: 1rem;
+
+    .image-container {
+      position: relative;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+    .d2-label {
+      position: absolute;
+      cursor: pointer;
+      width: 0.85%;
+      height: 1.2%;
+      border-radius: 50%;
+      border: 1px solid #5d5c5cba;
+      animation: pluse 2s ease 0s infinite;
+    }
+    @keyframes pluse {
+      0% {
+        box-shadow: 0 0 0 0 #0dcaf0;
+      }
+
+      70% {
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 8px;
+      }
+
+      100% {
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+      }
+    }
+    #d2-B-SD-121 {
+      top: 9%;
+      left: 55.8%;
+    }
+    #d2-B-H-404-02 {
+      top: 48.5%;
+      left: 23.8%;
+    }
+    #d2-B-SF-310 {
+      top: 28%;
+      left: 51.5%;
+    }
+    #d2-B-SF-311 {
+      top: 28%;
+      left: 53.7%;
+    }
+    #d2-B-SF-408 {
+      top: 42%;
+      left: 44.7%;
+    }
+    #d2-B-SF-409 {
+      top: 42%;
+      left: 46.7%;
+    }
+    #d2-B-SF-410 {
+      top: 42%;
+      left: 49%;
+    }
+    #d2-B-SF-411 {
+      top: 42%;
+      left: 51%;
+    }
+    #d2-B-SF-412 {
+      top: 42%;
+      left: 53.2%;
+    }
+    #d2-B-SF-413 {
+      top: 42%;
+      left: 55.2%;
+    }
+    #d2-B-SF-414 {
+      top: 42%;
+      left: 57.6%;
+    }
+    #d2-B-I-301-14 {
+      top: 39%;
+      left: 11.6%;
+    }
+    #d2-B-I-301-21 {
+      top: 36.2%;
+      left: 11.5%;
+    }
+    #d2-B-I-301-23 {
+      top: 37.2%;
+      left: 9%;
+    }
+    #d2-B-I-301-24 {
+      top: 39.2%;
+      left: 9.5%;
+    }
+    #d2-B-SD-306 {
+      top: 35.2%;
+      left: 39.5%;
+    }
+    #d2-B-H-R-406-21 {
+      top: 46.2%;
+      left: 34.5%;
+    }
+    #d2-B-H-R-407-21 {
+      top: 45.2%;
+      left: 38.8%;
+    }
+    #d2-B-H-R-201-21 {
+      top: 26.2%;
+      left: 8.8%;
+    }
+    #d2-B-H-R-202-21 {
+      top: 27.2%;
+      left: 13.2%;
+    }
+    #d2-B-H-R-203-21 {
+      top: 26.5%;
+      left: 17.2%;
+    }
+  }
+  .release-sales {
+    justify-content: space-between;
+
+    #status-form {
+      width: 120px;
+      align-self: center;
+      label {
+        position: relative;
+        padding-left: 15px;
+      }
+      label::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      label[for="unrelased"]::before {
+        background-color: rgb(51, 102, 204);
+      }
+      label[for="reserved"]::before {
+        background-color: rgb(220, 57, 18);
+      }
+      label[for="contracted"]::before {
+        background-color: rgb(255, 153, 0);
+      }
+      label[for="Blocked"]::before {
+        background-color: rgb(153, 0, 153);
+      }
+      label[for="available"]::before {
+        background-color: #109618;
+      }
+    }
+  }
+  .sales-rate {
+    .title {
+      width: 30%;
+    }
+    .bar {
+      width: 60%;
+      align-items: center;
+      .background {
+        width: 100%;
+        height: 8px;
+        background-color: aquamarine;
+      }
+      .trigger {
+        background-color: violet;
+        height: 8px;
+      }
+    }
+    .percentage {
+      width: 10%;
+    }
+    .water-fall .trigger {
+      width: 80%;
+    }
+    .bedroom-3 .trigger {
+      width: 60%;
+    }
+    .stand-alone .trigger {
+      width: 40%;
+    }
+    .town-house .trigger {
+      width: 20%;
+    }
+    .penthouse .trigger {
+      width: 10%;
+    }
+  }
+  .best-sales {
+    justify-content: space-around;
+    .highest,
+    .lowest {
+      .sale-container {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 5px solid #198754;
+        .best-border {
+          padding: 33px;
+        }
+      }
+    }
+  }
+}

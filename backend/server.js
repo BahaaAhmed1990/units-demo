@@ -23,6 +23,9 @@ app.use(express.static(path.join(__dirname, "../frontend")));
 app.get("/", (req, res) => {
   res.redirect("/virtual-tour");
 });
+app.get("/dashboard", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../", "frontend", "dashboard.html"));
+});
 app.get("/customize-unit", (req, res) => {
   res.sendFile(
     path.resolve(__dirname, "../", "frontend", "customize-unit.html")

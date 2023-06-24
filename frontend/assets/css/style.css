@@ -13700,4 +13700,203 @@ header #navbarNav .nav-item .nav-link.active {
   background-color: #ccc;
 }
 
+#dashboard .wrapper-2d {
+  max-width: 100%;
+  padding: 1rem;
+}
+#dashboard .wrapper-2d .image-container {
+  position: relative;
+}
+#dashboard .wrapper-2d .image-container img {
+  max-width: 100%;
+  height: auto;
+}
+#dashboard .wrapper-2d .d2-label {
+  position: absolute;
+  cursor: pointer;
+  width: 0.85%;
+  height: 1.2%;
+  border-radius: 50%;
+  border: 1px solid rgba(93, 92, 92, 0.7294117647);
+  animation: pluse 2s ease 0s infinite;
+}
+@keyframes pluse {
+  0% {
+    box-shadow: 0 0 0 0 #0dcaf0;
+  }
+  70% {
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 8px;
+  }
+  100% {
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  }
+}
+#dashboard .wrapper-2d #d2-B-SD-121 {
+  top: 9%;
+  left: 55.8%;
+}
+#dashboard .wrapper-2d #d2-B-H-404-02 {
+  top: 48.5%;
+  left: 23.8%;
+}
+#dashboard .wrapper-2d #d2-B-SF-310 {
+  top: 28%;
+  left: 51.5%;
+}
+#dashboard .wrapper-2d #d2-B-SF-311 {
+  top: 28%;
+  left: 53.7%;
+}
+#dashboard .wrapper-2d #d2-B-SF-408 {
+  top: 42%;
+  left: 44.7%;
+}
+#dashboard .wrapper-2d #d2-B-SF-409 {
+  top: 42%;
+  left: 46.7%;
+}
+#dashboard .wrapper-2d #d2-B-SF-410 {
+  top: 42%;
+  left: 49%;
+}
+#dashboard .wrapper-2d #d2-B-SF-411 {
+  top: 42%;
+  left: 51%;
+}
+#dashboard .wrapper-2d #d2-B-SF-412 {
+  top: 42%;
+  left: 53.2%;
+}
+#dashboard .wrapper-2d #d2-B-SF-413 {
+  top: 42%;
+  left: 55.2%;
+}
+#dashboard .wrapper-2d #d2-B-SF-414 {
+  top: 42%;
+  left: 57.6%;
+}
+#dashboard .wrapper-2d #d2-B-I-301-14 {
+  top: 39%;
+  left: 11.6%;
+}
+#dashboard .wrapper-2d #d2-B-I-301-21 {
+  top: 36.2%;
+  left: 11.5%;
+}
+#dashboard .wrapper-2d #d2-B-I-301-23 {
+  top: 37.2%;
+  left: 9%;
+}
+#dashboard .wrapper-2d #d2-B-I-301-24 {
+  top: 39.2%;
+  left: 9.5%;
+}
+#dashboard .wrapper-2d #d2-B-SD-306 {
+  top: 35.2%;
+  left: 39.5%;
+}
+#dashboard .wrapper-2d #d2-B-H-R-406-21 {
+  top: 46.2%;
+  left: 34.5%;
+}
+#dashboard .wrapper-2d #d2-B-H-R-407-21 {
+  top: 45.2%;
+  left: 38.8%;
+}
+#dashboard .wrapper-2d #d2-B-H-R-201-21 {
+  top: 26.2%;
+  left: 8.8%;
+}
+#dashboard .wrapper-2d #d2-B-H-R-202-21 {
+  top: 27.2%;
+  left: 13.2%;
+}
+#dashboard .wrapper-2d #d2-B-H-R-203-21 {
+  top: 26.5%;
+  left: 17.2%;
+}
+#dashboard .release-sales {
+  justify-content: space-between;
+}
+#dashboard .release-sales #status-form {
+  width: 120px;
+  align-self: center;
+}
+#dashboard .release-sales #status-form label {
+  position: relative;
+  padding-left: 15px;
+}
+#dashboard .release-sales #status-form label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+#dashboard .release-sales #status-form label[for=unrelased]::before {
+  background-color: rgb(51, 102, 204);
+}
+#dashboard .release-sales #status-form label[for=reserved]::before {
+  background-color: rgb(220, 57, 18);
+}
+#dashboard .release-sales #status-form label[for=contracted]::before {
+  background-color: rgb(255, 153, 0);
+}
+#dashboard .release-sales #status-form label[for=Blocked]::before {
+  background-color: rgb(153, 0, 153);
+}
+#dashboard .release-sales #status-form label[for=available]::before {
+  background-color: #109618;
+}
+#dashboard .sales-rate .title {
+  width: 30%;
+}
+#dashboard .sales-rate .bar {
+  width: 60%;
+  align-items: center;
+}
+#dashboard .sales-rate .bar .background {
+  width: 100%;
+  height: 8px;
+  background-color: aquamarine;
+}
+#dashboard .sales-rate .bar .trigger {
+  background-color: violet;
+  height: 8px;
+}
+#dashboard .sales-rate .percentage {
+  width: 10%;
+}
+#dashboard .sales-rate .water-fall .trigger {
+  width: 80%;
+}
+#dashboard .sales-rate .bedroom-3 .trigger {
+  width: 60%;
+}
+#dashboard .sales-rate .stand-alone .trigger {
+  width: 40%;
+}
+#dashboard .sales-rate .town-house .trigger {
+  width: 20%;
+}
+#dashboard .sales-rate .penthouse .trigger {
+  width: 10%;
+}
+#dashboard .best-sales {
+  justify-content: space-around;
+}
+#dashboard .best-sales .highest .sale-container,
+#dashboard .best-sales .lowest .sale-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #198754;
+}
+#dashboard .best-sales .highest .sale-container .best-border,
+#dashboard .best-sales .lowest .sale-container .best-border {
+  padding: 33px;
+}
+
 /*# sourceMappingURL=style.css.map */
